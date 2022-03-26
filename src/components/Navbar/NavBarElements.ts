@@ -25,7 +25,6 @@ export const Nav = styled.nav`
 
 export const NavBarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   height: ${navbarSize};
   z-index: 1;
   width: 100%;
@@ -70,8 +69,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  // adjust the Menu so it is in the middle of the page
-  margin-left: -150px;
+  margin-left: 40px;
   
   @media screen and (max-width: 768px) {
     display: none;
@@ -82,20 +80,6 @@ export const NavItem = styled.li`
     height: ${navbarSize};
 `
 
-// export const NavLinks = styled(NavLink)`
-//   color: ${myColors.old_white};
-//   display: flex;
-//   align-items: center;
-//   text-decoration: none;
-//   padding: 0 1rem;
-//   height: 100%;
-//   cursor: pointer;
-//
-//   &.active {
-//     border-bottom: 5px solid ${myColors.primary};
-//   }
-// `
-
 export const NavLinks = styled(LinkScroll)`
     color: ${myColors.old_white};
     display: flex;
@@ -105,8 +89,13 @@ export const NavLinks = styled(LinkScroll)`
     height: 100%;
     cursor: pointer;
 
-    &.active {
-        border-bottom: 5px solid ${myColors.primary};
+    &:active {
+        border-bottom: 5px solid ${myColors.white};
+    }
+  
+    &:hover{
+      transition: all 0.2s ease-in-out;
+      color: ${myColors.white};
     }
 `
 
