@@ -1,6 +1,21 @@
-import React, {useState, useEffect} from 'react';
-import {SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarRoute, SideBtnWrap} from "./SidebarElements";
+import React from 'react';
+import {
+    ButtonImgIcon,
+    CloseIcon,
+    Icon,
+    SidebarContainer,
+    SidebarLink,
+    SidebarMenu,
+    SidebarWrapper,
+    SideSocialWrap,
+    SocialIconLink,
+    SocialIcons
+} from "./SidebarElements";
 import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
+import {myColors} from "../../resources/styling-constants";
+import {BsDiscord} from "react-icons/bs";
+import {AiFillTwitterCircle} from "react-icons/ai";
+import OpenSeaIcon from "../../resources/OpenSeaIcon";
 
 
 export interface ISidebar {
@@ -38,6 +53,19 @@ export default function Sidebar(props: ISidebar) {
                         FAQ
                     </SidebarLink>
                 </SidebarMenu>
+                <SideSocialWrap>
+                    <SocialIcons>
+                    <SocialIconLink href="/" target="_blank" arial-label="Discord" color={myColors.discord_blue}>
+                        <BsDiscord />
+                    </SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.openSea_blue}>
+                        <OpenSeaIcon size={43} color={myColors.openSea_blue} />
+                    </SocialIconLink>
+                    <SocialIconLink href="/" target="_blank" arial-label="Twitter" color={myColors.twitter_blue}>
+                        <AiFillTwitterCircle />
+                    </SocialIconLink>
+                    </SocialIcons>
+                </SideSocialWrap>
                 {/*<SideBtnWrap>*/}
                 {/*    <SidebarRoute to={accountRouteName} onClick={toggleIsOpen}>*/}
                 {/*        Sign In*/}

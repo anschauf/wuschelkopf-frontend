@@ -69,6 +69,44 @@ export const SidebarLink = styled(NavLink)`
     transition: 0.2s ease-in-out;
   }
 `
+export const SideSocialWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 240px;
+`
+
+
+export interface ISocialIconLink {
+    color?: string
+}
+export const SocialIconLink = styled.a<ISocialIconLink>`
+  color: ${({color = myColors.white}) => `${color}}`};
+  fill: ${({color = myColors.white}) => `${color}}`};
+  font-size: 42px;
+
+  &:hover {
+    color: ${myColors.primary};
+    fill: ${myColors.primary};
+    transition: 0.2s ease-in-out;
+  }
+`
+
+export const ButtonImgIcon = styled.img`
+  height: 43px;
+
+  &:hover {
+    color: ${myColors.primary};
+    transition: 0.2s ease-in-out;
+  }
+`
+
 
 export const SideBtnWrap = styled.div`
   display: flex;

@@ -12,7 +12,8 @@ export const myColors = {
 
     // external
     twitter_blue: '#1DA1F2',
-    discord_blue: '#7289da'
+    discord_blue: '#7289da',
+    openSea_blue: '#2081e2'
 }
 
 export const pageSizes = {
