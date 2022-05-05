@@ -59,7 +59,7 @@ export default function Sidebar(props: ISidebar) {
                         <BsDiscord />
                     </SocialIconLink>
                     <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.openSea_blue}>
-                        <OpenSeaIcon size={43} color={myColors.openSea_blue} />
+                        <OpenSeaIcon size={43} />
                     </SocialIconLink>
                     <SocialIconLink href="/" target="_blank" arial-label="Twitter" color={myColors.twitter_blue}>
                         <AiFillTwitterCircle />

@@ -5,6 +5,7 @@ import {AiFillTwitterCircle} from 'react-icons/ai';
 import {MobileIcon, Nav, NavBarContainer, NavItem, NavLinks, NavLogo, NavMenu, SocialIcons, SocialIconLink, ButtonImgIcon} from "./NavBarElements";
 import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
 import {myColors} from '../../resources/styling-constants'
+import OpenSeaIcon from "../../resources/OpenSeaIcon";
 
 export interface INavBar {
     toggleIsOpen: () => void
@@ -47,8 +48,8 @@ export default function NavBar(props: INavBar) {
                         <SocialIconLink href="/" target="_blank" arial-label="Discord" color={myColors.discord_blue}>
                             <BsDiscord />
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" arial-label="OpenSea">
-                            <ButtonImgIcon src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Blue.svg" />
+                        <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.openSea_blue}>
+                            <OpenSeaIcon size={36}/>
                         </SocialIconLink>
                         <SocialIconLink href="/" target="_blank" arial-label="Twitter" color={myColors.twitter_blue}>
                                 <AiFillTwitterCircle />

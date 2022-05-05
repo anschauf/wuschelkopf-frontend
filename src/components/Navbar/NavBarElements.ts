@@ -141,7 +141,14 @@ export interface ISocialIconLink {
 }
 export const SocialIconLink = styled.a<ISocialIconLink>`
   color: ${({color = myColors.white}) => `${color}}`};
+  fill: ${({color = myColors.white}) => `${color}}`};
   font-size: 30px;
+  
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    color: ${myColors.white};
+    fill: ${myColors.white};
+  }
 `
 
 export const ButtonImgIcon = styled.img`

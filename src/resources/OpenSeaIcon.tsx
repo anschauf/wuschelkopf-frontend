@@ -5,11 +5,10 @@ import {myColors} from "./styling-constants";
 
 export interface IIcon {
     size: number,
-    color?: string
 }
 
 export default function OpenSeaIcon(props: IIcon) {
-    const { size, color = myColors.white } = props
+    const { size } = props
 
     const sizeText = `${size}px`
 
@@ -19,7 +18,6 @@ export default function OpenSeaIcon(props: IIcon) {
                 style={{
                     height: size,
                     width: size,
-                    color: "red"
                 }}
                  role="img"
                  viewBox="0 0 24 24"
