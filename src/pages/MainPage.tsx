@@ -1,15 +1,17 @@
 import React from 'react';
-import Hero from "../components/sections/Hero";
+import HeroSection from "../components/sections/HeroSection";
 import styled from "styled-components";
 import SlideSection from "../components/sections/SlideSection";
+import RoadmapSection from "../components/sections/RoadmapSection";
 
 
 function MainPage() {
 
     return (
         <MainPageContainer>
-            <Hero />
+            <HeroSection />
             <SlideSection />
+            <RoadmapSection />
 
         </MainPageContainer>
     );

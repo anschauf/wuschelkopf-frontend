@@ -11,7 +11,7 @@ import {
     SocialIconLink,
     SocialIcons
 } from "./SidebarElements";
-import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
+import {faqRoute, roadmapRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
 import {myColors} from "../../resources/styling-constants";
 import {BsDiscord} from "react-icons/bs";
 import {AiFillTwitterCircle} from "react-icons/ai";
@@ -40,7 +40,7 @@ export default function Sidebar(props: ISidebar) {
                     <SidebarLink to={homeRoute} onClick={toggleIsOpen}>
                         Home
                     </SidebarLink>
-                    <SidebarLink to={goalsRoute} onClick={toggleIsOpen}>
+                    <SidebarLink to={roadmapRoute} onClick={toggleIsOpen}>
                         Goals
                     </SidebarLink>
                     <SidebarLink to={rarityRoute} onClick={toggleIsOpen}>

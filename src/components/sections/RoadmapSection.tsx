@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
-import {myColors} from "../../resources/styling-constants";
 
-export interface IHero {
+export interface IGoalsSection {
 
 }
 
-export default function Hero(props: IHero) {
+export default function RoadmapSection(props: IGoalsSection) {
     const {} = props;
 
     // component state    
@@ -23,29 +22,27 @@ export default function Hero(props: IHero) {
     }, [isLoading])
 
     return (
-        <HeroContainer>
-            <HeroWrapper>
-                <p>This is the Hero</p>
-            </HeroWrapper>
-
-        </HeroContainer>
+        <Container>
+            <ContainerWrapper>
+                <Header>Roadmap</Header>
+            </ContainerWrapper>
+        </Container>
     )
 }
 
-export const HeroContainer = styled.div`
-  background: ${myColors.middle_grey};
-  height: 100vh;
-  max-height: 1100px;
-  position: relative;
-  overflow: hidden;
+
+const Container = styled.div`
 `
 
-const HeroWrapper = styled.div`
+const ContainerWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  padding-top: 50px;
+`
+
+const Header = styled.h1`
+    font-size: 30px;
 `

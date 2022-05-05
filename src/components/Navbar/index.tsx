@@ -13,7 +13,7 @@ import {
     SocialIconLink,
     SocialIcons
 } from "./NavBarElements";
-import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
+import {faqRoute, roadmapRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
 import {myColors} from '../../resources/styling-constants'
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
 
@@ -38,7 +38,7 @@ export default function NavBar(props: INavBar) {
                             <NavLinks to={homeRoute}>Home</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to={goalsRoute}>Goals</NavLinks>
+                            <NavLinks to={roadmapRoute}>Roadmap</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to={rarityRoute}>Rarity</NavLinks>
