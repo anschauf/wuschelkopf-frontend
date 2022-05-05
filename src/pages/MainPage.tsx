@@ -1,14 +1,16 @@
 import React from 'react';
 import Hero from "../components/sections/Hero";
 import styled from "styled-components";
-import ImageSlider from "../components/sections/ImageSlider";
+import SlideSection from "../components/sections/SlideSection";
+
 
 function MainPage() {
 
     return (
         <MainPageContainer>
             <Hero />
-            <ImageSlider />
+            <SlideSection />
+
         </MainPageContainer>
     );
 }

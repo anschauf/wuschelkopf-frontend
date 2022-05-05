@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   align-items: center;
   font-size: 1rem;
   //position: sticky; // this follows the sliding
-  position: fixed;
+  position: absolute;
   top:0;
   z-index: 100;
   
@@ -32,7 +32,7 @@ export const NavBarContainer = styled.div`
   padding: 0 24px;
   max-width: 1200px;
   justify-content: space-between;
-  //position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
