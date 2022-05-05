@@ -4,18 +4,20 @@ import {myColors} from "../../resources/styling-constants";
 import {Link as LinkScroll} from 'react-scroll'
 
 
-const navbarSize = '60px'
+const navbarSize = '100px'
 
 export const Nav = styled.nav`
-  background: ${myColors.middle_grey};
+  background: transparent;
   height: ${navbarSize};
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  //position: sticky; // this follows the sliding
+  position: fixed;
   top:0;
-  z-index: 10;
+  z-index: 100;
   
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;

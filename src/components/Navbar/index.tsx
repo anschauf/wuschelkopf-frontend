@@ -2,7 +2,17 @@ import React from 'react';
 import {FaBars} from 'react-icons/fa';
 import {BsDiscord} from 'react-icons/bs';
 import {AiFillTwitterCircle} from 'react-icons/ai';
-import {MobileIcon, Nav, NavBarContainer, NavItem, NavLinks, NavLogo, NavMenu, SocialIcons, SocialIconLink, ButtonImgIcon} from "./NavBarElements";
+import {
+    MobileIcon,
+    Nav,
+    NavBarContainer,
+    NavItem,
+    NavLinks,
+    NavLogo,
+    NavMenu,
+    SocialIconLink,
+    SocialIcons
+} from "./NavBarElements";
 import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
 import {myColors} from '../../resources/styling-constants'
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
@@ -13,7 +23,6 @@ export interface INavBar {
 
 export default function NavBar(props: INavBar) {
 
-    let circleClasses = "inline-block p-7 rounded-full w-20 mx-auto";
 
     const { toggleIsOpen } = props
     return (
