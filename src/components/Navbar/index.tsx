@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {FaBars, FaUser} from 'react-icons/fa';
-import {Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from "./NavBarElements";
+import React from 'react';
+import {FaBars} from 'react-icons/fa';
+import {MobileIcon, Nav, NavBarContainer, NavItem, NavLinks, NavLogo, NavMenu} from "./NavBarElements";
+import {faqRoute, goalsRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
 
 export interface INavBar {
     toggleIsOpen: () => void
@@ -18,19 +19,19 @@ export default function NavBar(props: INavBar) {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to={"/Test"}>Home</NavLinks>
+                            <NavLinks to={homeRoute}>Home</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to={"goals"}>Goals</NavLinks>
+                            <NavLinks to={goalsRoute}>Goals</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to={"rarity"}>FAQ</NavLinks>
+                            <NavLinks to={rarityRoute}>Rarity</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to={"team"}>Team</NavLinks>
+                            <NavLinks to={teamRoute}>Team</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to={"faq"}>FAQ</NavLinks>
+                            <NavLinks to={faqRoute}>FAQ</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavBarContainer>

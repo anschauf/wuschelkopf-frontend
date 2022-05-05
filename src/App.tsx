@@ -1,20 +1,24 @@
 import React, {useState} from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import './App.css';
 import NavBar from "./components/Navbar";
+import MainPage from "./pages/MainPage";
+import Sidebar from "./components/Sidebar";
 
 function App() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const toggleIsOpen = () => {
+        console.log(isOpen)
         setIsOpen(!isOpen)
     }
 
   return (
     <div className="App">
         <BrowserRouter>
+            <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
             <NavBar toggleIsOpen={toggleIsOpen}/>
-            Hello world
+            <MainPage />
         </BrowserRouter>
 
     </div>
