@@ -17,9 +17,9 @@ function MainPage() {
 
 export const MainPageContainer = styled.div`
   //display: flex;
-  //justify-content: center;
+  justify-content: center;
   //align-items: stretch;
-  //align-content: center;
+  align-content: center;
   //margin: 20px;
 `
 

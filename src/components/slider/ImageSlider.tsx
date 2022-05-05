@@ -174,5 +174,6 @@ const Slide = styled.div<ISlide>`
 `
 
 const SlideImage = styled.img`
-    width: 100%;
+  border-radius: 20px;
+  width: 100%;
 `
