@@ -24,15 +24,28 @@ export default function Hero(props: IHero) {
 
     return (
         <HeroContainer>
-            <p>This is the Hero</p>
+            <HeroWrapper>
+                <p>This is the Hero</p>
+            </HeroWrapper>
+
         </HeroContainer>
     )
 }
 
 export const HeroContainer = styled.div`
   background: ${myColors.middle_grey};
+  height: 100vh;
+  max-height: 1100px;
+  position: relative;
+  overflow: hidden;
+`
+
+const HeroWrapper = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1000px;
+  overflow: hidden;
+  position: relative;
 `
