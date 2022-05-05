@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-import { myColors } from "../../resources/styling-constants";
-import { Link as LinkRoute } from 'react-router-dom'
-import { Link as LinkScroll } from 'react-scroll'
+import {myColors} from "../../resources/styling-constants";
+import {Link as LinkScroll} from 'react-scroll'
 
 
 const navbarSize = '60px'
@@ -29,8 +28,9 @@ export const NavBarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1800px;
-  position: absolute;
+  max-width: 1200px;
+  justify-content: space-between;
+  //position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -126,5 +126,24 @@ export const NavBtnLink = styled(NavLink)`
     background: ${myColors.white};
     color: ${myColors.black};
   }
-  
+`
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 140px;
+`
+
+
+export interface ISocialIconLink {
+    color?: string
+}
+export const SocialIconLink = styled.a<ISocialIconLink>`
+  color: ${({color = myColors.white}) => `${color}}`};
+  font-size: 30px;
+`
+
+export const ButtonImgIcon = styled.img`
+  height: 31px  
 `

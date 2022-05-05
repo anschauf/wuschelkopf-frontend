@@ -14,7 +14,7 @@ function App() {
     }
 
   return (
-    <div className="App">
+    <div>
         <BrowserRouter>
             <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
             <NavBar toggleIsOpen={toggleIsOpen}/>

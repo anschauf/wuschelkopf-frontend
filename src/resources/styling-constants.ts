@@ -1,5 +1,5 @@
 export const myColors = {
-    primary: '#900f2a',
+    primary: '#0f8202',
     secondary: '#ffb600',
     black: '#000',
     almost_black: '#010606',
@@ -8,7 +8,11 @@ export const myColors = {
     light_grey: '#656464',
     light_grey_darker: '#525252',
     white: '#fff',
-    old_white: '#faebd7'
+    old_white: '#faebd7',
+
+    // external
+    twitter_blue: '#1DA1F2',
+    discord_blue: '#7289da'
 }
 
 export const pageSizes = {
