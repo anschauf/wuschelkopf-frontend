@@ -9,7 +9,6 @@ function App() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const toggleIsOpen = () => {
-        console.log(isOpen)
         setIsOpen(!isOpen)
     }
 

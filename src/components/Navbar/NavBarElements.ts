@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import {myColors} from "../../resources/styling-constants";
 import {Link as LinkScroll} from 'react-scroll'
+import {pageSizes} from '../../resources/styling-constants'
 
 
 const navbarSize = '100px'
@@ -48,6 +49,10 @@ export const NavLogo = styled(NavLink)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+
+  @media screen and (max-width: ${pageSizes.md}) {
+    font-size: 1rem;
+  }
 `
 
 export const MobileIcon = styled.div`
@@ -89,6 +94,7 @@ export const NavLinks = styled(LinkScroll)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    font-size: 12px;
 
     &:active {
         border-bottom: 5px solid ${myColors.white};

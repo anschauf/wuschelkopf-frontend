@@ -8,6 +8,7 @@
 html,
 body {
   height: 100%;
-  background: black;
+  /*background: #75a836;*/
+  background: #a56500;
   color: white;
 }

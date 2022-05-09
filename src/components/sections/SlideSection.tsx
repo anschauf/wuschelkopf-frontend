@@ -10,7 +10,7 @@ export interface IImageSlider {
 
 export default function SlideSection(props: IImageSlider) {
 
-    const imageSize = 340
+    const imageSize = 280
 
     return (
         <Container>
@@ -20,18 +20,21 @@ export default function SlideSection(props: IImageSlider) {
                     imageSize={imageSize}
                     hasBorderShadow={false}
                     rightDirection={false}
+                    betweenPadding={8}
                 />
                 <ImageSlider
                     imageInfos={imageSources_two}
                     imageSize={imageSize}
                     hasBorderShadow={false}
                     rightDirection={true}
+                    betweenPadding={8}
                 />
                 <ImageSlider
                     imageInfos={imageSources_three}
                     imageSize={imageSize}
                     hasBorderShadow={false}
                     rightDirection={false}
+                    betweenPadding={8}
                 />
             </ContainerWrapper>
         </Container>

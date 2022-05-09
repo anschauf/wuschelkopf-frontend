@@ -9,7 +9,8 @@ export interface IImageSlider {
     imageSize?: number
     rightDirection?: boolean
     hasBorderShadow?: boolean,
-    speed?: number
+    speed?: number,
+    betweenPadding?: number
 }
 
 /**
@@ -20,7 +21,7 @@ export interface IImageSlider {
  * @constructor
  */
 export default function ImageSlider(props: IImageSlider) {
-    const {imageInfos, imageSize = 400, rightDirection = false, hasBorderShadow = false, speed = 100} = props;
+    const {imageInfos, imageSize = 400, rightDirection = false, hasBorderShadow = false, speed = 100, betweenPadding = 15} = props;
 
 
 
@@ -37,7 +38,7 @@ export default function ImageSlider(props: IImageSlider) {
                 {
                     doubledImageInfos.map(dImgInfo => {
                         return (
-                            <Slide imgSize={imageSize}>
+                            <Slide imgSize={imageSize} padding={betweenPadding}>
                                 <SlideImage src={dImgInfo.image} alt={dImgInfo.alt} />
                             </Slide>
                         )
