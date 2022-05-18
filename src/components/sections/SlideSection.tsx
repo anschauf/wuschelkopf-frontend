@@ -43,6 +43,7 @@ export default function SlideSection(props: IImageSlider) {
 
 
 const Container = styled.div`
+  background-color: transparent;
   position: relative;
   overflow: hidden;
 `

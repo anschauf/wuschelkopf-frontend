@@ -1,12 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import styled from "styled-components";
-import {myColors} from "../../../resources/styling-constants";
-import {HeroContainer, HeroWrapper, HeroMale, FrogEyeRight, FrogEyeLeft} from './HeroElements';
-import img from '../../../images/hero/landscape.png'
-import alienLandscape from '../../../images/hero/1624.jpg'
-import wuschelBackground from '../../../images/hero/background_green_brown_wuschel.png'
+import React, {useEffect, useState} from 'react';
+import {LeftContainer, FrogEyeLeft, FrogEyeRight, HeroContainer, HeroMale, HeroFemale, WindWheel, TitleContainer, RightCointainer} from './HeroElements';
 import hero_male from '../../../images/hero/hero_male.png'
+import hero_female from '../../../images/hero/hero_female.png'
+import crown from '../../../images/hero/crown.png'
 import frog_eye from '../../../images/hero/frog_eye.png'
+import wind_wheel from '../../../images/hero/windwheel.png'
 
 export interface IHero {
 
@@ -29,13 +27,21 @@ export default function HeroSection(props: IHero) {
     }, [isLoading])
 
     return (
-        <HeroContainer img={wuschelBackground}>
-            <HeroMale src={hero_male} />
-            <FrogEyeRight src={frog_eye} />
-            <FrogEyeLeft src={frog_eye} />
-            <HeroWrapper>
+        <HeroContainer>
+            <LeftContainer>
+                <HeroMale src={hero_male} />
+                <FrogEyeRight src={frog_eye} />
+                <FrogEyeLeft src={frog_eye} />
+            </LeftContainer>
+
+            <TitleContainer>
                 <p>This is the Hero</p>
-            </HeroWrapper>
+            </TitleContainer>
+
+            <RightCointainer>
+                <HeroFemale src={hero_female} />
+                <WindWheel src={wind_wheel} />
+            </RightCointainer>
 
         </HeroContainer>
     )
