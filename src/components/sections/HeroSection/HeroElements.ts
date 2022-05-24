@@ -11,11 +11,21 @@ export const HeroContainer = styled.div`
   position: relative;
   overflow: hidden;
   display: flex;
+  
+  @media screen and (max-width: ${pageSizes.sm}) {
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+  }
 `
 
-export const LeftContainer = styled.div`
+export const MonitorLeftContainer = styled.div`
   //background-color: red;
   position: relative;
+  
+  @media screen and (max-width: ${pageSizes.sm}) {
+    display: none;
+  }
 `
 
 export const HeroMale = styled.img`
@@ -37,7 +47,9 @@ export const HeroMale = styled.img`
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 10px;
+    top: 30px;
+    left: -40px;
+    height: 320px;
   }
 `
 
@@ -61,6 +73,15 @@ export const FrogEyeRight = styled.img`
     top: 430px;
     left: 57px;
     height: 0.9%;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    //animation: none;
+    animation: eye-move-right-xs 9s linear infinite;
+    position: relative;
+    top: 165px;
+    left: 28px;
+    height: 3%;
   }
   
   @keyframes eye-move-right-xl
@@ -206,6 +227,53 @@ export const FrogEyeRight = styled.img`
       left: 55px;
     }
   }
+
+  @keyframes eye-move-right-xs {
+    0% {
+      top: 165px;
+      left: 28px;
+    }
+
+    13% {
+      top: 167px;
+      left: 26px;
+    }
+
+    25% {
+      top: 165px;
+      left: 28px;
+    }
+
+    37% {
+      top: 167px;
+      left: 26px;
+    }
+
+    50% {
+      top: 169px;
+      left: 29px;
+    }
+
+    63% {
+      top: 169px;
+      left: 29px;
+    }
+
+    75% {
+      top: 165px;
+      left: 26px;
+    }
+
+    88% {
+      top: 167px;
+      left: 28px;
+    }
+
+    100% {
+      top: 165px;
+      left: 28px;
+    }
+  }
 `
 
 export const FrogEyeLeft = styled.img`
@@ -227,6 +295,14 @@ export const FrogEyeLeft = styled.img`
     top: 435px;
     left: 73px;
     height: 0.9%;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    animation: eye-move-left-xs 8s linear infinite;
+    position: relative;
+    top: 167px;
+    left: 35px;
+    height: 3%;
   }
   
   @keyframes eye-move-left-xl
@@ -370,6 +446,53 @@ export const FrogEyeLeft = styled.img`
       left: 72px;
     }
   }
+
+  @keyframes eye-move-left-xs {
+    0% {
+      top: 165px;
+      left: 33px;
+    }
+
+    13% {
+      top: 167px;
+      left: 35px;
+    }
+
+    25% {
+      top: 169px;
+      left: 33px;
+    }
+
+    37% {
+      top: 167px;
+      left: 35px;
+    }
+
+    50% {
+      top: 165px;
+      left: 33px;
+    }
+
+    63% {
+      top: 169px;
+      left: 33px;
+    }
+
+    75% {
+      top: 167px;
+      left: 35px;
+    }
+
+    88% {
+      top: 167px;
+      left: 35px;
+    }
+
+    100% {
+      top: 165px;
+      left: 33px;
+    }
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -380,9 +503,16 @@ export const TitleContainer = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
+  //border: blue 6px solid;
+  @media screen and (max-width: ${pageSizes.sm}) {
+    height: 260px;
+  }
 `
 
-export const RightCointainer = styled.div`
+export const MonitorRightCointainer = styled.div`
+    @media screen and (max-width: ${pageSizes.sm}) {
+      display: none;
+    }
 `
 
 
@@ -405,7 +535,9 @@ export const HeroFemale = styled.img`
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 10px;
+    height: 310px;
+    top: 60px;
+    left: -60px;
   }
 `
 
@@ -430,7 +562,9 @@ export const WindWheel = styled.img`
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 20px;
+    top: 140px;
+    left: -30px;
+    height: 70px;
   }
   
   
@@ -457,4 +591,29 @@ export const WindWheel = styled.img`
       transform: rotate3d(0, 0, 1, 0deg);
     }
   }
+`
+
+export const MobileImageWrapper = styled.div`
+    {
+      display: none;
+      margin-top: 280px;
+      margin-bottom: 50px;
+
+      @media screen and (max-width: ${pageSizes.sm}) {
+        display: flex;
+        width: 100%;
+      }
+    }
+`
+
+export const MobileLeftContainer = styled.div`
+    position: relative;
+    width: 50%;
+    display: flex;
+`
+
+export const MobileRightContainer = styled.div`
+    position: relative;
+    display: flex;
+    width: 50%;
 `

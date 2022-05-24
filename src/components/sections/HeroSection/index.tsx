@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {LeftContainer, FrogEyeLeft, FrogEyeRight, HeroContainer, HeroMale, HeroFemale, WindWheel, TitleContainer, RightCointainer} from './HeroElements';
+import {MonitorLeftContainer, FrogEyeLeft, FrogEyeRight, HeroContainer, HeroMale, HeroFemale,
+    WindWheel, TitleContainer, MonitorRightCointainer, MobileImageWrapper, MobileLeftContainer, MobileRightContainer} from './HeroElements';
 import hero_male from '../../../images/hero/hero_male.png'
 import hero_female from '../../../images/hero/hero_female.png'
 import crown from '../../../images/hero/crown.png'
@@ -28,20 +29,34 @@ export default function HeroSection(props: IHero) {
 
     return (
         <HeroContainer>
-            <LeftContainer>
+            <MobileImageWrapper>
+                <MobileLeftContainer>
+                    <HeroMale src={hero_male} />
+                    <FrogEyeRight src={frog_eye} />
+                    <FrogEyeLeft src={frog_eye} />
+                </MobileLeftContainer>
+                <MobileRightContainer>
+                    <HeroFemale src={hero_female} />
+                    <WindWheel src={wind_wheel} />
+                </MobileRightContainer>
+            </MobileImageWrapper>
+
+            <MonitorLeftContainer>
                 <HeroMale src={hero_male} />
                 <FrogEyeRight src={frog_eye} />
                 <FrogEyeLeft src={frog_eye} />
-            </LeftContainer>
+            </MonitorLeftContainer>
 
             <TitleContainer>
                 <p>This is the Hero</p>
             </TitleContainer>
 
-            <RightCointainer>
+            <MonitorRightCointainer>
                 <HeroFemale src={hero_female} />
                 <WindWheel src={wind_wheel} />
-            </RightCointainer>
+            </MonitorRightCointainer>
+
+
 
         </HeroContainer>
     )
