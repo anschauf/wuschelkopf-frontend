@@ -1,6 +1,6 @@
 export const myColors = {
-    primary: '#0f8202',
-    secondary: '#ffb600',
+    primary: '#eebd7b',
+    secondary: '#0f8202',
     black: '#000',
     almost_black: '#010606',
     dark_grey: '#181818',
@@ -9,6 +9,7 @@ export const myColors = {
     light_grey_darker: '#525252',
     white: '#fff',
     old_white: '#faebd7',
+    light_brown: '#eebd7b',
 
     // external
     twitter_blue: '#1DA1F2',

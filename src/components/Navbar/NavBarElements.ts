@@ -40,10 +40,10 @@ export const NavBarContainer = styled.div`
 `
 
 export const NavLogo = styled(NavLink)`
-  color: ${myColors.old_white};
+  color: ${myColors.primary};
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   display: flex;
   align-items: center; 
   margin-left: 24px;
@@ -66,7 +66,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: ${myColors.old_white};
+    color: ${myColors.primary};
   }
 `
 
@@ -87,14 +87,18 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(LinkScroll)`
-    color: ${myColors.old_white};
+    color: ${myColors.primary};
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 0.7rem;
     height: 100%;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 24px;
+
+  @media screen and (max-width: ${pageSizes.lg}) {
+    font-size: 16px;
+  }
 
     &:active {
         border-bottom: 5px solid ${myColors.white};
