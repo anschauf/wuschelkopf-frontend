@@ -1,6 +1,7 @@
 export const myColors = {
-    primary: '#eebd7b',
+    primary: '#671b8d',
     secondary: '#0f8202',
+    danger: '#a5f311',
     black: '#000',
     almost_black: '#010606',
     dark_grey: '#181818',
@@ -9,7 +10,7 @@ export const myColors = {
     light_grey_darker: '#525252',
     white: '#fff',
     old_white: '#faebd7',
-    light_brown: '#eebd7b',
+    light_brown: '#671b8d',
 
     // external
     twitter_blue: '#1DA1F2',
@@ -22,4 +23,8 @@ export const pageSizes = {
     md: '992px',
     lg: '1200px',
     xl: '1800px'
+}
+
+export const spacing = {
+    default: '16px'
 }

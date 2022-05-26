@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import {myColors} from "../../../resources/styling-constants";
-import {pageSizes} from "../../../resources/styling-constants";
+import {pageSizes, spacing, myColors} from "../../../resources/styling-constants";
 
 export const HeroContainer = styled.div`
   background-position: center;
@@ -499,6 +498,7 @@ export const TitleContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -519,7 +519,7 @@ export const MonitorRightCointainer = styled.div`
 export const HeroFemale = styled.img`
   position: absolute;
   top: 180px;
-  left: 1000px;
+  left: 1100px;
   height: 760px;
 
   @media screen and (max-width: ${pageSizes.xl}) {
@@ -544,7 +544,7 @@ export const HeroFemale = styled.img`
 export const WindWheel = styled.img`
   position: absolute;
   top: 380px;
-  left: 1060px;
+  left: 1160px;
   height: 200px;
 
   animation: spinning 20s linear infinite;
@@ -616,4 +616,12 @@ export const MobileRightContainer = styled.div`
     position: relative;
     display: flex;
     width: 50%;
+`
+
+export const MintingCount = styled.p`
+    padding: ${spacing.default};
+`
+
+export const ColorSpan = styled.span`
+    color: ${myColors.danger};
 `

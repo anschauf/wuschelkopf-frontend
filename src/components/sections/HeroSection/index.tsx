@@ -1,11 +1,25 @@
 import React, {useEffect, useState} from 'react';
-import {MonitorLeftContainer, FrogEyeLeft, FrogEyeRight, HeroContainer, HeroMale, HeroFemale,
-    WindWheel, TitleContainer, MonitorRightCointainer, MobileImageWrapper, MobileLeftContainer, MobileRightContainer} from './HeroElements';
+import {
+    FrogEyeLeft,
+    FrogEyeRight,
+    HeroContainer,
+    HeroFemale,
+    HeroMale,
+    MobileImageWrapper,
+    MobileLeftContainer,
+    MobileRightContainer,
+    MonitorLeftContainer,
+    MonitorRightCointainer,
+    TitleContainer,
+    WindWheel,
+    MintingCount,
+    ColorSpan
+} from './HeroElements';
 import hero_male from '../../../images/hero/hero_male.png'
 import hero_female from '../../../images/hero/hero_female.png'
-import crown from '../../../images/hero/crown.png'
 import frog_eye from '../../../images/hero/frog_eye.png'
 import wind_wheel from '../../../images/hero/windwheel.png'
+import { MyButton } from '../../ButtonElements';
 
 export interface IHero {
 
@@ -48,7 +62,8 @@ export default function HeroSection(props: IHero) {
             </MonitorLeftContainer>
 
             <TitleContainer>
-                <p>This is the Hero</p>
+                <MyButton big={true} onClick={() => console.log("Hello")}>MINT WUSCHELKOPF NFT's</MyButton>
+                <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
             </TitleContainer>
 
             <MonitorRightCointainer>

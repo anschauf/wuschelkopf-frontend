@@ -5,6 +5,7 @@ import {Link as LinkScroll} from 'react-scroll'
 import {pageSizes} from '../../resources/styling-constants'
 
 
+
 const navbarSize = '100px'
 
 export const Nav = styled.nav`
@@ -19,6 +20,7 @@ export const Nav = styled.nav`
   position: absolute;
   top:0;
   z-index: 100;
+  font-family: 'Permanent Marker',cursive;
   
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -37,6 +39,7 @@ export const NavBarContainer = styled.div`
   left: 0;
   right: 0;
   overflow-y: hidden;
+
 `
 
 export const NavLogo = styled(NavLink)`
@@ -48,6 +51,7 @@ export const NavLogo = styled(NavLink)`
   align-items: center; 
   margin-left: 24px;
   font-weight: bold;
+  font-family: 'Permanent Marker',cursive;
   text-decoration: none;
 
   @media screen and (max-width: ${pageSizes.md}) {
@@ -94,6 +98,7 @@ export const NavLinks = styled(LinkScroll)`
     padding: 0 0.7rem;
     height: 100%;
     cursor: pointer;
+    font-family: 'Permanent Marker',cursive;
     font-size: 24px;
 
   @media screen and (max-width: ${pageSizes.lg}) {
