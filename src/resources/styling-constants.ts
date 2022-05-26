@@ -32,5 +32,6 @@ export const spacing = {
 
 export const fontSizes = {
     title_xl: '72px',
-    title_lg: '60px'
+    title_lg: '60px',
+    title_sm: '48px'
 }

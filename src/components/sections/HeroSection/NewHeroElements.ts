@@ -1,16 +1,60 @@
 import styled from "styled-components";
 import {pageSizes} from "../../../resources/styling-constants";
 
-export const HeroDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    //border: red solid 4px;
-    width: 100%;
-    height: 300px;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
+export const NewHeroContainer = styled.div`
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1100px;
   
+  //max-height: 1100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+  
+  @media screen and (max-width: ${pageSizes.sm}) {
+    flex-direction: column;
+    flex: 1;
+  }
+`
+
+
+export const FigureWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+`
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+`
+
+export const MobileFigureWrapper = styled.div`
+  display: none;
+  @media screen and (max-width: ${pageSizes.sm}) {
+    position: absolute;
+    top: 540px;
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    justify-content: space-around;
+  }
+ 
 `
 
 export const NewHeroMale = styled.img`
@@ -31,7 +75,11 @@ export const NewHeroMale = styled.img`
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 10px;
+    position: relative;
+    top: 0px;
+    left: 0;
+    //right: 1%;
+    height: 260px;
   }
 `
 
@@ -52,6 +100,12 @@ export const NewLeftEye = styled.img`
     left: -244px;
     height: 7px;
   }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    top: -112px;
+    left: -92px;
+    height: 6px;
+  }
 `
 
 export const NewRightEye = styled.img`
@@ -70,6 +124,12 @@ export const NewRightEye = styled.img`
     top: 89px;
     left: -259px;
     height: 7px;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    top: -118px;
+    left: -79px;
+    height: 6px;
   }
 `
 
@@ -94,7 +154,10 @@ export const NewHeroFemale = styled.img`
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 10px;
+    position: relative;
+    top: 130px;
+    left: 20px;
+    height: 250px;
   }
 `
 
@@ -116,6 +179,12 @@ export const NewWindWheel = styled.img`
     top: -26px;
     left: 24px;
     height: 100px;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    top: -58px;
+    left: -72px;
+    height: 60px;
   }
 
 
@@ -141,4 +210,7 @@ export const NewWindWheel = styled.img`
       transform: rotate3d(0, 0, 1, 0deg);
     }
   }
+`
+
+export const MobileFigure = styled.div`
 `

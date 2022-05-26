@@ -534,12 +534,15 @@ export const HeroTitle = styled.h1`
       @media screen and (max-width: ${pageSizes.xl}) {
         font-size: ${fontSizes.title_lg};
       }
+
+      @media screen and (max-width: ${pageSizes.sm}) {
+        font-size: ${fontSizes.title_sm};
+      }
 `
 
 
 
 export const MonitorLeftContainer = styled.div`
-  border: red solid 5px;
   position: absolute;
   top: 300px;
   left:100px;

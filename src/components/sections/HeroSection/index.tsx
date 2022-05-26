@@ -21,7 +21,18 @@ import hero_female from '../../../images/hero/hero_female.png'
 import frog_eye from '../../../images/hero/frog_eye.png'
 import wind_wheel from '../../../images/hero/windwheel.png'
 import { MyButton } from '../../ButtonElements';
-import { HeroDiv, NewHeroMale, NewHeroFemale, NewWindWheel, NewLeftEye, NewRightEye } from './NewHeroElements';
+import {
+    NewHeroContainer,
+    FigureWrapper,
+    TitleWrapper,
+    NewHeroMale,
+    NewHeroFemale,
+    NewWindWheel,
+    NewLeftEye,
+    NewRightEye,
+    MobileFigureWrapper,
+    MobileFigure
+} from './NewHeroElements';
 
 export interface IHero {
 
@@ -44,7 +55,7 @@ export default function HeroSection(props: IHero) {
     }, [isLoading])
 
     return (
-        <HeroContainer>
+        <NewHeroContainer>
             {/*<MobileImageWrapper>*/}
             {/*    <MobileLeftContainer>*/}
             {/*        <HeroMale src={hero_male} />*/}
@@ -78,22 +89,35 @@ export default function HeroSection(props: IHero) {
             {/*    <FrogEyeLeft src={frog_eye} />*/}
             {/*</MonitorRightCointainer>*/}
 
-            <HeroDiv>
+            <FigureWrapper>
                 <NewHeroFemale src={hero_female}/>
                 <NewWindWheel src={wind_wheel} />
-            </HeroDiv>
-            <HeroDiv>
+            </FigureWrapper>
+            <TitleWrapper>
                 <HeroTitle>Wuschelkopf</HeroTitle>
                 <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={() => console.log("Hello")}>MINT WUSCHELKOPF NFTs</MyButton>
                 <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
-            </HeroDiv>
-            <HeroDiv>
+            </TitleWrapper>
+            <FigureWrapper>
                 <NewHeroMale src={hero_male}/>
                 <NewLeftEye src={frog_eye} />
                 <NewRightEye src={frog_eye} />
-            </HeroDiv>
+            </FigureWrapper>
 
-        </HeroContainer>
+            {/*<MobileFigureWrapper>*/}
+            {/*    <MobileFigure>*/}
+            {/*        <NewHeroFemale src={hero_female}/>*/}
+            {/*        <NewWindWheel src={wind_wheel} />*/}
+            {/*    </MobileFigure>*/}
+            {/*    <MobileFigure>*/}
+            {/*        <NewHeroMale src={hero_male}/>*/}
+            {/*        <NewLeftEye src={frog_eye} />*/}
+            {/*        <NewRightEye src={frog_eye} />*/}
+            {/*    </MobileFigure>*/}
+
+            {/*</MobileFigureWrapper>*/}
+
+        </NewHeroContainer>
     )
 }
 
