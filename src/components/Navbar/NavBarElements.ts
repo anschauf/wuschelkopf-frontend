@@ -6,7 +6,7 @@ import {pageSizes} from '../../resources/styling-constants'
 
 
 
-const navbarSize = '100px'
+const navbarSize = '120px'
 
 export const Nav = styled.nav`
   background: transparent;
@@ -39,7 +39,10 @@ export const NavBarContainer = styled.div`
   left: 0;
   right: 0;
   overflow-y: hidden;
-
+`
+export const     NavLogoLinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 export const NavLogo = styled(NavLink)`
@@ -57,6 +60,11 @@ export const NavLogo = styled(NavLink)`
   @media screen and (max-width: ${pageSizes.md}) {
     font-size: 1rem;
   }
+`
+
+export const Logo = styled.img`
+    height: 100%;
+    width: ${navbarSize};
 `
 
 export const MobileIcon = styled.div`
