@@ -6,38 +6,49 @@ export const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  
   max-height: 1100px;
   position: relative;
   overflow: hidden;
   display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
   
   @media screen and (max-width: ${pageSizes.sm}) {
     flex-direction: column;
     flex: 1;
-    width: 100%;
   }
 `
 
-export const MonitorLeftContainer = styled.div`
-  //background-color: red;
-  position: relative;
+
+
+
+export const MonitorRightCointainer = styled.div`
+  border: blue solid 5px;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 300px;
+  right: 6%;
   z-index: 10;
-  
-  @media screen and (max-width: ${pageSizes.sm}) {
-    display: none;
-  }
+    @media screen and (max-width: ${pageSizes.sm}) {
+      display: none;
+    }
 `
 
 export const HeroMale = styled.img`
-  position: absolute;
-  top: 180px;
+  position: relative;
+  //top: 180px;
   //left: 50px;
-  left: 1120px;
+  //right: -17px;
   height: 800px;
+  z-index: 10;
 
   @media screen and (max-width: ${pageSizes.xl}) {
-    top: 180px;
-    left: -40px;
+    top: 380px;
+    right: -20px;
     height: 600px;
   }
 
@@ -56,16 +67,19 @@ export const HeroMale = styled.img`
 
 // animation: ${({ speed, rightDirection }) => `scroll-${rightDirection ? 'right' : 'left'} ${speed}s linear infinite`};
 export const FrogEyeRight = styled.img`
-  animation: eye-move-right-xl 7s linear infinite;
+  //animation: eye-move-right-xl 7s linear infinite;
+  animation: none;
   position: absolute;
-  top: 528px;
-  left: 1289px;
+  //top: 528px;
+  //left: 1289px;
   height: 1.5%;
+  z-index: 12;
 
   @media screen and (max-width: ${pageSizes.xl}) {
-    animation: eye-move-right-lg 7s linear infinite;
+    //animation: eye-move-right-lg 7s linear infinite;
+    animation: none;
     top: 434px;
-    left: 84px;
+    right: 100px;
     height: 1.2%;
   }
 
@@ -505,7 +519,6 @@ export const TitleContainer = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 1;
-  //border: blue 6px solid;
   @media screen and (max-width: ${pageSizes.sm}) {
     height: 260px;
   }
@@ -514,27 +527,39 @@ export const TitleContainer = styled.div`
 export const HeroTitle = styled.h1`
     color: ${myColors.primary};
     padding: ${spacing.double};
-    font-size: ${fontSizes.title};
+    font-size: ${fontSizes.title_xl};
     font-family: 'Permanent Marker',cursive;
     font-weight: bolder;
+
+      @media screen and (max-width: ${pageSizes.xl}) {
+        font-size: ${fontSizes.title_lg};
+      }
 `
 
-export const MonitorRightCointainer = styled.div`
+
+
+export const MonitorLeftContainer = styled.div`
+  border: red solid 5px;
+  position: absolute;
+  top: 300px;
+  left:100px;
+  width: 600px;
+  height: 750px;
   z-index: 10;
-    @media screen and (max-width: ${pageSizes.sm}) {
-      display: none;
-    }
+  
+  @media screen and (max-width: ${pageSizes.sm}) {
+    display: none;
+  }
 `
-
 
 export const HeroFemale = styled.img`
-  position: absolute;
-  top: 140px;
-  left: 60px;
+  position: relative;
+  //top: 140px;
+  left: -60px;
   height: 720px;
 
   @media screen and (max-width: ${pageSizes.xl}) {
-    top: 280px;
+    top: 380px;
     left: 60%;
     height: 540px;
   }
@@ -554,8 +579,8 @@ export const HeroFemale = styled.img`
 
 export const WindWheel = styled.img`
   position: absolute;
-  top: 340px;
-  left: 125px;
+  top: 200px;
+  left: 25px;
   height: 170px;
 
   animation: spinning 20s linear infinite;
