@@ -11,6 +11,7 @@ import {
     MonitorLeftContainer,
     MonitorRightCointainer,
     TitleContainer,
+    HeroTitle,
     WindWheel,
     MintingCount,
     ColorSpan
@@ -62,6 +63,7 @@ export default function HeroSection(props: IHero) {
             </MonitorLeftContainer>
 
             <TitleContainer>
+                <HeroTitle>Wuschelkopfs</HeroTitle>
                 <MyButton big={true} onClick={() => console.log("Hello")}>MINT WUSCHELKOPF NFT's</MyButton>
                 <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
             </TitleContainer>

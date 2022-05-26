@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {pageSizes, spacing, myColors} from "../../../resources/styling-constants";
+import {pageSizes, spacing, myColors, fontSizes} from "../../../resources/styling-constants";
 
 export const HeroContainer = styled.div`
   background-position: center;
@@ -507,6 +507,14 @@ export const TitleContainer = styled.div`
   @media screen and (max-width: ${pageSizes.sm}) {
     height: 260px;
   }
+`
+
+export const HeroTitle = styled.h1`
+    color: ${myColors.primary};
+    padding: ${spacing.double};
+    font-size: ${fontSizes.title};
+    font-family: 'Permanent Marker',cursive;
+    font-weight: bolder;
 `
 
 export const MonitorRightCointainer = styled.div`

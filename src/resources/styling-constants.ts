@@ -26,5 +26,10 @@ export const pageSizes = {
 }
 
 export const spacing = {
-    default: '16px'
+    default: '16px',
+    double: '32px'
+}
+
+export const fontSizes = {
+    title: '72px'
 }
