@@ -63,8 +63,8 @@ export default function HeroSection(props: IHero) {
             </MonitorLeftContainer>
 
             <TitleContainer>
-                <HeroTitle>Wuschelkopfs</HeroTitle>
-                <MyButton big={true} onClick={() => console.log("Hello")}>MINT WUSCHELKOPF NFT's</MyButton>
+                <HeroTitle>Wuschelkopf</HeroTitle>
+                <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={() => console.log("Hello")}>MINT WUSCHELKOPF NFTs</MyButton>
                 <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
             </TitleContainer>
 

@@ -21,6 +21,7 @@ export const HeroContainer = styled.div`
 export const MonitorLeftContainer = styled.div`
   //background-color: red;
   position: relative;
+  z-index: 10;
   
   @media screen and (max-width: ${pageSizes.sm}) {
     display: none;
@@ -35,7 +36,7 @@ export const HeroMale = styled.img`
 
   @media screen and (max-width: ${pageSizes.xl}) {
     top: 180px;
-    left: 40px;
+    left: -40px;
     height: 600px;
   }
 
@@ -63,7 +64,7 @@ export const FrogEyeRight = styled.img`
   @media screen and (max-width: ${pageSizes.xl}) {
     animation: eye-move-right-lg 7s linear infinite;
     top: 434px;
-    left: 164px;
+    left: 84px;
     height: 1.2%;
   }
 
@@ -136,47 +137,47 @@ export const FrogEyeRight = styled.img`
   @keyframes eye-move-right-lg{
     0% {
       top: 432px;
-      left: 167px;
+      left: 87px;
     }
 
     13% {
       top: 440px;
-      left: 167px;
+      left: 87px;
     }
 
     25% {
       top: 436px;
-      left: 163px;
+      left: 83px;
     }
 
     37% {
       top: 434px;
-      left: 172px;
+      left: 82px;
     }
 
     50% {
       top: 434px;
-      left: 164px;
+      left: 84px;
     }
 
     63% {
       top: 440px;
-      left: 167px;
+      left: 87px;
     }
 
     75% {
       top: 440px;
-      left: 167px;
+      left: 87px;
     }
 
     88% {
       top: 440px;
-      left: 167px;
+      left: 87px;
     }
 
     100% {
       top: 432px;
-      left: 167px;
+      left: 87px;
     }
   }
   
@@ -285,7 +286,7 @@ export const FrogEyeLeft = styled.img`
   @media screen and (max-width: ${pageSizes.xl}) {
     animation: eye-move-left-lg 4s linear infinite;
     top: 436px;
-    left: 193px;
+    left: 113px;
     height: 1.2%;
   }
 
@@ -355,47 +356,47 @@ export const FrogEyeLeft = styled.img`
   @keyframes eye-move-left-lg {
     0% {
       top: 432px;
-      left: 188px;
+      left: 108px;
     }
 
     13% {
       top: 436px;
-      left: 188px;
+      left: 108px;
     }
 
     25% {
       top: 436px;
-      left: 188px;
+      left: 108px;
     }
 
     37% {
       top: 436px;
-      left: 183px;
+      left: 103px;
     }
 
     50% {
       top: 436px;
-      left: 183px;
+      left: 103px;
     }
 
     63% {
       top: 436px;
-      left: 193px;
+      left: 113px;
     }
 
     75% {
       top: 436px;
-      left: 188px;
+      left: 108px;
     }
 
     88% {
       top: 436px;
-      left: 188px;
+      left: 108px;
     }
 
     100% {
       top: 432px;
-      left: 188px;
+      left: 108px;
     }
   }
 
@@ -503,6 +504,7 @@ export const TitleContainer = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
+  z-index: 1;
   //border: blue 6px solid;
   @media screen and (max-width: ${pageSizes.sm}) {
     height: 260px;
@@ -518,6 +520,7 @@ export const HeroTitle = styled.h1`
 `
 
 export const MonitorRightCointainer = styled.div`
+  z-index: 10;
     @media screen and (max-width: ${pageSizes.sm}) {
       display: none;
     }
