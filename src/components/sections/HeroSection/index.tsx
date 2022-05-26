@@ -56,11 +56,13 @@ export default function HeroSection(props: IHero) {
                 </MobileRightContainer>
             </MobileImageWrapper>
 
+
             <MonitorLeftContainer>
-                <HeroMale src={hero_male} />
-                <FrogEyeRight src={frog_eye} />
-                <FrogEyeLeft src={frog_eye} />
+                <HeroFemale src={hero_female} />
+                <WindWheel src={wind_wheel} />
             </MonitorLeftContainer>
+
+
 
             <TitleContainer>
                 <HeroTitle>Wuschelkopf</HeroTitle>
@@ -68,9 +70,11 @@ export default function HeroSection(props: IHero) {
                 <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
             </TitleContainer>
 
+
             <MonitorRightCointainer>
-                <HeroFemale src={hero_female} />
-                <WindWheel src={wind_wheel} />
+                <HeroMale src={hero_male} />
+                <FrogEyeRight src={frog_eye} />
+                <FrogEyeLeft src={frog_eye} />
             </MonitorRightCointainer>
 
 

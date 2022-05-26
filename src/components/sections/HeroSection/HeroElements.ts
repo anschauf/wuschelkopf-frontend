@@ -30,8 +30,9 @@ export const MonitorLeftContainer = styled.div`
 
 export const HeroMale = styled.img`
   position: absolute;
-  top: 120px;
-  left: 50px;
+  top: 180px;
+  //left: 50px;
+  left: 1120px;
   height: 800px;
 
   @media screen and (max-width: ${pageSizes.xl}) {
@@ -57,8 +58,8 @@ export const HeroMale = styled.img`
 export const FrogEyeRight = styled.img`
   animation: eye-move-right-xl 7s linear infinite;
   position: absolute;
-  top: 468px; // 612
-  left: 219px; // 144
+  top: 528px;
+  left: 1289px;
   height: 1.5%;
 
   @media screen and (max-width: ${pageSizes.xl}) {
@@ -87,50 +88,48 @@ export const FrogEyeRight = styled.img`
   @keyframes eye-move-right-xl
   {
     0% {
-      top: 457px;
-      left:  219px;
+      top: 528px;
+      left: 1289px;
     }
 
     13% {
-      top: 468px;
-      left: 214px;
+      top: 528px;
+      left: 1294px;
     }
 
     25% {
-      top: 462px;
-      left: 225px;
-
+      top: 519px;
+      left: 1294px;
     }
 
     37% {
-      top: 462px;
-      left: 222px;
+      top: 522px;
+      left: 1295px;
     }
 
     50% {
-      top: 462px;
-      left: 214px;
-
+      top: 522px;
+      left: 1295px;
     }
 
     63% {
-      top: 459px;
-      left: 222px;
+      top: 519px;
+      left: 1294px;
     }
 
     75% {
-      top: 468px;
-      left: 214px;
+      top: 528px;
+      left: 1289px;
     }
 
     88% {
-      top: 468px;
-      left: 219px;
+      top: 519px;
+      left: 1294px;
     }
 
     100% {
-      top: 457px;
-      left: 218px;
+      top: 528px;
+      left: 1289px;
     }
   }
 
@@ -277,10 +276,11 @@ export const FrogEyeRight = styled.img`
 `
 
 export const FrogEyeLeft = styled.img`
+  //animation: none;
   animation: eye-move-left-xl 4s linear infinite;
   position: absolute;
-  top: 463px;
-  left: 255px;
+  top: 519px;
+  left: 1323px;
   height: 1.5%;
 
   @media screen and (max-width: ${pageSizes.xl}) {
@@ -308,48 +308,48 @@ export const FrogEyeLeft = styled.img`
   @keyframes eye-move-left-xl
   {
     0% {
-      top: 457px;
-      left: 249px;
+      top: 517px;
+      left: 1319px;
     }
 
     13% {
-      top: 466px;
-      left: 243px;
+      top: 529px;
+      left: 1319px;
     }
 
     25% {
-      top: 463px;
-      left: 249px;
+      top: 517px;
+      left: 1319px;
     }
 
     37% {
-      top: 463px;
-      left: 249px;
+      top: 525px;
+      left: 1313px;
     }
 
     50% {
-      top: 463px;
-      left: 249px;
+      top: 517px;
+      left: 1319px;
     }
 
     63% {
-      top: 458px;
-      left: 253px;
+      top: 518px;
+      left: 1313px;
     }
 
     75% {
-      top: 463px;
-      left: 255px;
+      top: 517px;
+      left: 1315px;
     }
 
     88% {
-      top: 457px;
-      left: 249px;
+      top: 519px;
+      left: 1323px;
     }
 
     100% {
-      top: 457px;
-      left: 249px;;
+      top: 517px;
+      left: 1319px;
     }
   }
 
@@ -529,9 +529,9 @@ export const MonitorRightCointainer = styled.div`
 
 export const HeroFemale = styled.img`
   position: absolute;
-  top: 180px;
-  left: 1100px;
-  height: 760px;
+  top: 140px;
+  left: 60px;
+  height: 720px;
 
   @media screen and (max-width: ${pageSizes.xl}) {
     top: 280px;
@@ -554,9 +554,9 @@ export const HeroFemale = styled.img`
 
 export const WindWheel = styled.img`
   position: absolute;
-  top: 380px;
-  left: 1160px;
-  height: 200px;
+  top: 340px;
+  left: 125px;
+  height: 170px;
 
   animation: spinning 20s linear infinite;
 
