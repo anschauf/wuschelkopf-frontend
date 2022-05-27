@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import {pageSizes, spacing, myColors, fontSizes} from "../../../resources/styling-constants";
+import {fontSizes, myColors, pageSizes, spacing} from "../../../resources/styling-constants";
 
 export const HeroContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 1100px;
   
-  max-height: 1100px;
+  //max-height: 1100px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -23,505 +23,22 @@ export const HeroContainer = styled.div`
 `
 
 
-
-
-export const MonitorRightCointainer = styled.div`
-  border: blue solid 5px;
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  top: 300px;
-  right: 6%;
-  z-index: 10;
-    @media screen and (max-width: ${pageSizes.sm}) {
-      display: none;
-    }
-`
-
-export const HeroMale = styled.img`
-  position: relative;
-  //top: 180px;
-  //left: 50px;
-  //right: -17px;
-  height: 800px;
-  z-index: 10;
-
-  @media screen and (max-width: ${pageSizes.xl}) {
-    top: 380px;
-    right: -20px;
-    height: 600px;
-  }
-
-  @media screen and (max-width: ${pageSizes.lg}) {
-    top: 240px;
-    left: -40px;
-    height: 450px;
-  }
-
-  @media screen and (max-width: ${pageSizes.sm}) {
-    top: 30px;
-    left: -40px;
-    height: 320px;
-  }
-`
-
-// animation: ${({ speed, rightDirection }) => `scroll-${rightDirection ? 'right' : 'left'} ${speed}s linear infinite`};
-export const FrogEyeRight = styled.img`
-  //animation: eye-move-right-xl 7s linear infinite;
-  animation: none;
-  position: absolute;
-  //top: 528px;
-  //left: 1289px;
-  height: 1.5%;
-  z-index: 12;
-
-  @media screen and (max-width: ${pageSizes.xl}) {
-    //animation: eye-move-right-lg 7s linear infinite;
-    animation: none;
-    top: 434px;
-    right: 100px;
-    height: 1.2%;
-  }
-
-  @media screen and (max-width: ${pageSizes.lg}) {
-    animation: eye-move-right-sm 7s linear infinite;
-    top: 430px;
-    left: 57px;
-    height: 0.9%;
-  }
-
-  @media screen and (max-width: ${pageSizes.sm}) {
-    //animation: none;
-    animation: eye-move-right-xs 9s linear infinite;
-    position: relative;
-    top: 165px;
-    left: 28px;
-    height: 3%;
-  }
-  
-  @keyframes eye-move-right-xl
-  {
-    0% {
-      top: 528px;
-      left: 1289px;
-    }
-
-    13% {
-      top: 528px;
-      left: 1294px;
-    }
-
-    25% {
-      top: 519px;
-      left: 1294px;
-    }
-
-    37% {
-      top: 522px;
-      left: 1295px;
-    }
-
-    50% {
-      top: 522px;
-      left: 1295px;
-    }
-
-    63% {
-      top: 519px;
-      left: 1294px;
-    }
-
-    75% {
-      top: 528px;
-      left: 1289px;
-    }
-
-    88% {
-      top: 519px;
-      left: 1294px;
-    }
-
-    100% {
-      top: 528px;
-      left: 1289px;
-    }
-  }
-
-  @keyframes eye-move-right-lg{
-    0% {
-      top: 432px;
-      left: 87px;
-    }
-
-    13% {
-      top: 440px;
-      left: 87px;
-    }
-
-    25% {
-      top: 436px;
-      left: 83px;
-    }
-
-    37% {
-      top: 434px;
-      left: 82px;
-    }
-
-    50% {
-      top: 434px;
-      left: 84px;
-    }
-
-    63% {
-      top: 440px;
-      left: 87px;
-    }
-
-    75% {
-      top: 440px;
-      left: 87px;
-    }
-
-    88% {
-      top: 440px;
-      left: 87px;
-    }
-
-    100% {
-      top: 432px;
-      left: 87px;
-    }
-  }
-  
-  @keyframes eye-move-right-sm {
-    0% {
-      top: 430px;
-      left: 55px;
-    }
-
-    13% {
-      top: 436px;
-      left: 55px;
-    }
-
-    25% {
-      top: 436px;
-      left: 55px;
-    }
-
-    37% {
-      top: 433px;
-      left: 58px;
-    }
-
-    50% {
-      top: 430px;
-      left: 57px;
-    }
-
-    63% {
-      top: 430px;
-      left: 57px;
-    }
-
-    75% {
-      top: 430px;
-      left: 57px;
-    }
-
-    88% {
-      top: 436px;
-      left: 55px;
-    }
-
-    100% {
-      top: 430px;
-      left: 55px;
-    }
-  }
-
-  @keyframes eye-move-right-xs {
-    0% {
-      top: 165px;
-      left: 28px;
-    }
-
-    13% {
-      top: 167px;
-      left: 26px;
-    }
-
-    25% {
-      top: 165px;
-      left: 28px;
-    }
-
-    37% {
-      top: 167px;
-      left: 26px;
-    }
-
-    50% {
-      top: 169px;
-      left: 29px;
-    }
-
-    63% {
-      top: 169px;
-      left: 29px;
-    }
-
-    75% {
-      top: 165px;
-      left: 26px;
-    }
-
-    88% {
-      top: 167px;
-      left: 28px;
-    }
-
-    100% {
-      top: 165px;
-      left: 28px;
-    }
-  }
-`
-
-export const FrogEyeLeft = styled.img`
-  //animation: none;
-  animation: eye-move-left-xl 4s linear infinite;
-  position: absolute;
-  top: 519px;
-  left: 1323px;
-  height: 1.5%;
-
-  @media screen and (max-width: ${pageSizes.xl}) {
-    animation: eye-move-left-lg 4s linear infinite;
-    top: 436px;
-    left: 113px;
-    height: 1.2%;
-  }
-
-  @media screen and (max-width: ${pageSizes.lg}) {
-    animation: eye-move-left-sm 4s linear infinite;
-    top: 435px;
-    left: 73px;
-    height: 0.9%;
-  }
-
-  @media screen and (max-width: ${pageSizes.sm}) {
-    animation: eye-move-left-xs 8s linear infinite;
-    position: relative;
-    top: 167px;
-    left: 35px;
-    height: 3%;
-  }
-  
-  @keyframes eye-move-left-xl
-  {
-    0% {
-      top: 517px;
-      left: 1319px;
-    }
-
-    13% {
-      top: 529px;
-      left: 1319px;
-    }
-
-    25% {
-      top: 517px;
-      left: 1319px;
-    }
-
-    37% {
-      top: 525px;
-      left: 1313px;
-    }
-
-    50% {
-      top: 517px;
-      left: 1319px;
-    }
-
-    63% {
-      top: 518px;
-      left: 1313px;
-    }
-
-    75% {
-      top: 517px;
-      left: 1315px;
-    }
-
-    88% {
-      top: 519px;
-      left: 1323px;
-    }
-
-    100% {
-      top: 517px;
-      left: 1319px;
-    }
-  }
-
-  @keyframes eye-move-left-lg {
-    0% {
-      top: 432px;
-      left: 108px;
-    }
-
-    13% {
-      top: 436px;
-      left: 108px;
-    }
-
-    25% {
-      top: 436px;
-      left: 108px;
-    }
-
-    37% {
-      top: 436px;
-      left: 103px;
-    }
-
-    50% {
-      top: 436px;
-      left: 103px;
-    }
-
-    63% {
-      top: 436px;
-      left: 113px;
-    }
-
-    75% {
-      top: 436px;
-      left: 108px;
-    }
-
-    88% {
-      top: 436px;
-      left: 108px;
-    }
-
-    100% {
-      top: 432px;
-      left: 108px;
-    }
-  }
-
-  @keyframes eye-move-left-sm {
-    0% {
-      top: 430px;
-      left: 72px;
-    }
-
-    13% {
-      top: 432px;
-      left: 75px;
-    }
-
-    25% {
-      top: 432px;
-      left: 69px;
-    }
-
-    37% {
-      top: 432px;
-      left: 69px;
-    }
-
-    50% {
-      top: 436px;
-      left: 72px;
-    }
-
-    63% {
-      top: 432px;
-      left: 75px;
-    }
-
-    75% {
-      top: 436px;
-      left: 72px;
-    }
-
-    88% {
-      top: 435px;
-      left: 73px;
-    }
-
-    100% {
-      top: 430px;
-      left: 72px;
-    }
-  }
-
-  @keyframes eye-move-left-xs {
-    0% {
-      top: 165px;
-      left: 33px;
-    }
-
-    13% {
-      top: 167px;
-      left: 35px;
-    }
-
-    25% {
-      top: 169px;
-      left: 33px;
-    }
-
-    37% {
-      top: 167px;
-      left: 35px;
-    }
-
-    50% {
-      top: 165px;
-      left: 33px;
-    }
-
-    63% {
-      top: 169px;
-      left: 33px;
-    }
-
-    75% {
-      top: 167px;
-      left: 35px;
-    }
-
-    88% {
-      top: 167px;
-      left: 35px;
-    }
-
-    100% {
-      top: 165px;
-      left: 33px;
-    }
-  }
-`
-
-export const TitleContainer = styled.div`
-  width: 100%;
-  height: 100%;
+export const FigureWrapper = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  @media screen and (max-width: ${pageSizes.sm}) {
-    height: 260px;
-  }
+  justify-content: center;
+  
+`
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 `
 
 export const HeroTitle = styled.h1`
@@ -540,74 +57,329 @@ export const HeroTitle = styled.h1`
       }
 `
 
-
-
-export const MonitorLeftContainer = styled.div`
-  position: absolute;
-  top: 300px;
-  left:100px;
-  width: 600px;
-  height: 750px;
-  z-index: 10;
-  
-  @media screen and (max-width: ${pageSizes.sm}) {
-    display: none;
-  }
+export const MintingCount = styled.p`
+    padding: ${spacing.default};
 `
 
-export const HeroFemale = styled.img`
-  position: relative;
-  //top: 140px;
-  left: -60px;
-  height: 720px;
+export const ColorSpan = styled.span`
+    color: ${myColors.danger};
+`
+
+export const MobileFigureWrapper = styled.div`
+  display: none;
+  @media screen and (max-width: ${pageSizes.sm}) {
+    position: absolute;
+    top: 540px;
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    justify-content: space-around;
+  }
+ 
+`
+
+export const HeroMale = styled.img`
+    position: relative;
+    top: 100px;
+    height: 600px;
 
   @media screen and (max-width: ${pageSizes.xl}) {
-    top: 380px;
-    left: 60%;
-    height: 540px;
+    top: 150px;
+    left: -50px;
+    height: 500px;
   }
 
   @media screen and (max-width: ${pageSizes.lg}) {
-    top: 420px;
-    left: 55%;
-    height: 380px;
+    height: 310px;
+    top: 230px;
+    left: -150px;
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    height: 310px;
-    top: 60px;
-    left: -60px;
+    position: relative;
+    top: 0;
+    left: 0;
+    //right: 1%;
+    height: 260px;
+  }
+`
+
+const xl_move = 4
+const lg_move = 3
+const md_move = 2
+
+export const LeftEye = styled.img`
+  position: relative;
+  top: -160px;
+  left: -183px;
+  height: 15px;
+  animation: eye-move-left-xl 4s linear infinite;
+
+  @media screen and (max-width: ${pageSizes.xl}) {
+    top: -65px;
+    left: -202px;
+    height: 12px;
+
+    animation: eye-move-left-lg 4s linear infinite;
+  }
+
+  @media screen and (max-width: ${pageSizes.lg}) {
+    top: 97px;
+    left: -244px;
+    height: 7px;
+
+
+    animation: eye-move-left-md 4s linear infinite;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    top: -112px;
+    left: -92px;
+    height: 6px;
+  }
+
+  @keyframes eye-move-left-xl {
+    0% {
+      transform: translateY(-${xl_move}px)
+    }
+    
+    13%{
+      transform: translateX(${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${xl_move}px) translateY(-${xl_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${xl_move}px) translateY(-${xl_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${xl_move}px)
+    }
+  }
+  @keyframes eye-move-left-lg {
+    0% {
+      transform: translateY(-${lg_move}px)
+    }
+    
+    13%{
+      transform: translateX(${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${lg_move}px) translateY(-${lg_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${lg_move}px) translateY(-${lg_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${lg_move}px)
+    }
+  }
+  @keyframes eye-move-left-md {
+    0% {
+      transform: translateY(-${md_move}px)
+    }
+    
+    13%{
+      transform: translateX(${md_move}px) translateY(${md_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${md_move}px) translateY(${md_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${md_move}px) translateY(-${md_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${md_move}px) translateY(-${md_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${md_move}px)
+    }
+  }
+`
+
+export const RightEye = styled.img`
+  position: relative;
+  top: -173px;
+  left: -212px;
+  height: 15px;
+
+  animation: eye-move-right-xl 5s linear infinite;
+
+  @media screen and (max-width: ${pageSizes.xl}) {
+    top: -78px;
+    left: -227px;
+    height: 12px;
+
+    animation: eye-move-right-lg 5s linear infinite;
+  }
+
+  @media screen and (max-width: ${pageSizes.lg}) {
+    top: 89px;
+    left: -259px;
+    height: 7px;
+
+    animation: eye-move-right-md 5s linear infinite;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    top: -118px;
+    left: -79px;
+    height: 6px;
+  }
+  
+  
+  @keyframes eye-move-right-xl {
+    0% {
+      transform: translateY(${xl_move}px)
+    }
+    
+    13%{
+      transform: translateX(${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${xl_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    100%{
+      transform: translateY(${xl_move}px)
+    }
+  }
+  @keyframes eye-move-right-lg {
+    0% {
+      transform: translateY(${lg_move}px)
+    }
+    
+    13%{
+      transform: translateX(${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${lg_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    100%{
+      transform: translateY(${lg_move}px)
+    }
+  }
+  @keyframes eye-move-right-md {
+    0% {
+      transform: translateY(${md_move}px)
+    }
+    
+    13%{
+      transform: translateX(${md_move}px) translateY(${md_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${md_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${md_move}px) translateY(${md_move}px);
+    }
+    
+    100%{
+      transform: translateY(${md_move}px)
+    }
+  }
+`
+
+
+
+export const HeroFemale = styled.img`
+    position: relative;
+    left: 70px;
+    top: 200px;
+    height: 700px;
+
+  @media screen and (max-width: ${pageSizes.xl}) {
+    left: 100px;
+    top: 130px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: ${pageSizes.lg}) {
+    height: 340px;
+    top: 250px;
+    left: 150px;
+  }
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    position: relative;
+    top: 130px;
+    left: 20px;
+    height: 250px;
   }
 `
 
 export const WindWheel = styled.img`
-  position: absolute;
-  top: 200px;
-  left: 25px;
-  height: 170px;
-
-  animation: spinning 20s linear infinite;
+    position: relative;
+    height: 170px;
+    top: -330px;
+    left: -190px;
+  
+    animation: spinning 20s linear infinite;
 
   @media screen and (max-width: ${pageSizes.xl}) {
-    top: 420px;
-    left: 62.5%;
-    height: 150px;
+    top: -250px;
+    left: -85px;
+    height: 140px;
   }
 
   @media screen and (max-width: ${pageSizes.lg}) {
-    top: 510px;
-    left: 58%;
+    top: -26px;
+    left: 24px;
     height: 100px;
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
-    top: 140px;
-    left: -30px;
-    height: 70px;
+    top: -58px;
+    left: -72px;
+    height: 60px;
   }
-  
-  
-  
+
+
   @keyframes spinning {
     0% {
       -webkit-transform: rotate3d(0, 0, 1, 360deg);
@@ -632,35 +404,5 @@ export const WindWheel = styled.img`
   }
 `
 
-export const MobileImageWrapper = styled.div`
-    {
-      display: none;
-      margin-top: 280px;
-      margin-bottom: 50px;
-
-      @media screen and (max-width: ${pageSizes.sm}) {
-        display: flex;
-        width: 100%;
-      }
-    }
-`
-
-export const MobileLeftContainer = styled.div`
-    position: relative;
-    width: 50%;
-    display: flex;
-`
-
-export const MobileRightContainer = styled.div`
-    position: relative;
-    display: flex;
-    width: 50%;
-`
-
-export const MintingCount = styled.p`
-    padding: ${spacing.default};
-`
-
-export const ColorSpan = styled.span`
-    color: ${myColors.danger};
+export const MobileFigure = styled.div`
 `
