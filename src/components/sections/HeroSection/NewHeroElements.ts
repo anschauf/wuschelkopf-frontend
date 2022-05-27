@@ -83,28 +83,114 @@ export const NewHeroMale = styled.img`
   }
 `
 
+const xl_move = 4
+const lg_move = 3
+const md_move = 2
+
 export const NewLeftEye = styled.img`
   position: relative;
-  top: -158px;
+  top: -160px;
   left: -183px;
   height: 15px;
+  animation: eye-move-left-xl 4s linear infinite;
 
   @media screen and (max-width: ${pageSizes.xl}) {
     top: -65px;
     left: -202px;
     height: 12px;
+
+    animation: eye-move-left-lg 4s linear infinite;
   }
 
   @media screen and (max-width: ${pageSizes.lg}) {
     top: 97px;
     left: -244px;
     height: 7px;
+
+
+    animation: eye-move-left-md 4s linear infinite;
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
     top: -112px;
     left: -92px;
     height: 6px;
+  }
+
+  @keyframes eye-move-left-xl {
+    0% {
+      transform: translateY(-${xl_move}px)
+    }
+    
+    13%{
+      transform: translateX(${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${xl_move}px) translateY(-${xl_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${xl_move}px) translateY(-${xl_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${xl_move}px)
+    }
+  }
+  @keyframes eye-move-left-lg {
+    0% {
+      transform: translateY(-${lg_move}px)
+    }
+    
+    13%{
+      transform: translateX(${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${lg_move}px) translateY(-${lg_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${lg_move}px) translateY(-${lg_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${lg_move}px)
+    }
+  }
+  @keyframes eye-move-left-md {
+    0% {
+      transform: translateY(-${md_move}px)
+    }
+    
+    13%{
+      transform: translateX(${md_move}px) translateY(${md_move}px);
+    }
+    
+    50% {
+      transform: translateX(-${md_move}px) translateY(${md_move}px);
+    }
+    
+    63% {
+      transform: translateX(-${md_move}px) translateY(-${md_move}px);
+    }
+    
+    75% {
+      transform: translateX(-${md_move}px) translateY(-${md_move}px);
+    }
+    
+    100%{
+      transform: translateY(-${md_move}px)
+    }
   }
 `
 
@@ -114,22 +200,105 @@ export const NewRightEye = styled.img`
   left: -212px;
   height: 15px;
 
+  animation: eye-move-right-xl 5s linear infinite;
+
   @media screen and (max-width: ${pageSizes.xl}) {
     top: -78px;
     left: -227px;
     height: 12px;
+
+    animation: eye-move-right-lg 5s linear infinite;
   }
 
   @media screen and (max-width: ${pageSizes.lg}) {
     top: 89px;
     left: -259px;
     height: 7px;
+
+    animation: eye-move-right-md 5s linear infinite;
   }
 
   @media screen and (max-width: ${pageSizes.sm}) {
     top: -118px;
     left: -79px;
     height: 6px;
+  }
+  
+  
+  @keyframes eye-move-right-xl {
+    0% {
+      transform: translateY(${xl_move}px)
+    }
+    
+    13%{
+      transform: translateX(${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${xl_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${xl_move}px) translateY(${xl_move}px);
+    }
+    
+    100%{
+      transform: translateY(${xl_move}px)
+    }
+  }
+  @keyframes eye-move-right-lg {
+    0% {
+      transform: translateY(${lg_move}px)
+    }
+    
+    13%{
+      transform: translateX(${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${lg_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${lg_move}px) translateY(${lg_move}px);
+    }
+    
+    100%{
+      transform: translateY(${lg_move}px)
+    }
+  }
+  @keyframes eye-move-right-md {
+    0% {
+      transform: translateY(${md_move}px)
+    }
+    
+    13%{
+      transform: translateX(${md_move}px) translateY(${md_move}px);
+    }
+    
+    50% {
+      transform: translateX(0px) translateY(0);
+    }
+    
+    63% {
+      transform: translateX(${md_move}px) translateY(0);
+    }
+    
+    75% {
+      transform: translateX(-${md_move}px) translateY(${md_move}px);
+    }
+    
+    100%{
+      transform: translateY(${md_move}px)
+    }
   }
 `
 
