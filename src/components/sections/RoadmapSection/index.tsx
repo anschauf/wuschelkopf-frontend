@@ -9,7 +9,7 @@ import CardSlider from "../../CardSlider";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {skinRarities} from "./roadmap-content";
+import {hairRarities, skinRarities} from "./roadmap-content";
 
 export interface IGoalsSection {
 
@@ -24,6 +24,7 @@ export default function Index(props: IGoalsSection) {
             <ContainerWrapper>
                 <SectionTitle>Rarities</SectionTitle>
                 <CardSlider cardContents={skinRarities}/>
+                <CardSlider cardContents={hairRarities}/>
             </ContainerWrapper>
         </Container>
     )

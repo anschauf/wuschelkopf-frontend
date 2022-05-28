@@ -6,6 +6,9 @@ export const myColors = {
     danger: '#a5f311',
     lime: '#89ba2e',
     light_purple: '#be84db',
+    ultra_light_purple: '#d0a6e5',
+    light_orange: '#fe8d4f',
+    light_lime: '#ccf381',
     black: '#000',
     almost_black: '#010606',
     dark_grey: '#181818',
@@ -16,6 +19,13 @@ export const myColors = {
     white: '#fff',
     old_white: '#faebd7',
     light_brown: '#671b8d',
+
+
+    // rarities section colors --> additional color shades
+    background_orange: '#fca575',
+    highlight_orange: '#fd7000',
+    highlight_purple: '#da04fc',
+    background_green: '#d1eca1',
 
 
 
@@ -33,6 +43,7 @@ export const pageSizes = {
 }
 
 export const spacing = {
+    half: '8px',
     default: '16px',
     double: '32px'
 }
@@ -41,5 +52,6 @@ export const fontSizes = {
     title_xl: '72px',
     title_lg: '60px',
     title_sm: '48px',
+    title_s: '40px',
     title_xs: '36px'
 }

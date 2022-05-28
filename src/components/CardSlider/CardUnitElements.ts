@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import {myColors, spacing, fontSizes} from '../../resources/styling-constants'
 
+export interface IColor {
+    pickedColor?: string
+}
 
 export const Container = styled.div`
   // Center slide text vertically
@@ -22,12 +25,13 @@ export const Content = styled.div`
 
 `
 
-export const Card = styled.div`
-  background: ${myColors.light_purple};
+export const Card = styled.div<IColor>`
+  background: ${({pickedColor = myColors.light_purple}) => pickedColor};
   border-radius: 10%;
   margin:  ${spacing.double} 0;
   width: 360px;
-  height: 520px;
+  height: 530px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
 
 export const CardContent = styled.div`
@@ -45,27 +49,29 @@ export const ImageWrapper = styled.div`
   
 `
 
-export const CardImage = styled.img`
+export const CardImage = styled.img<IColor>`
   height:   100%;
   width:   100%;
   object-fit: cover;
   border-radius: 50%;
+  background-color: ${({pickedColor = myColors.primary}) => pickedColor};
 `
 
-export const HighlightLabel = styled.span`
-    color: ${myColors.danger};
+export const HighlightLabel = styled.span<IColor>`
+  margin-top: ${spacing.half};
+    color: ${({pickedColor = myColors.lime}) => pickedColor};
 `
 
-export const CardTitleSpan = styled.span`
-  color: ${myColors.primary};
+export const CardTitleSpan = styled.span<IColor>`
+  color: ${({pickedColor = myColors.primary}) => pickedColor};
   padding: 0;
   margin: 0;
-  font-size: ${fontSizes.title_xs};
+  font-size: ${fontSizes.title_s};
+  font-family: 'Permanent Marker', cursive;
 `
 
 export const DescriptionSpan = styled.span`
   padding: 0;
   margin: 0;
   text-align: center;
-  //color: ${myColors.very_light_grey};
 `
