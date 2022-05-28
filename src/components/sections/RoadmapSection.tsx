@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
+import {SectionTitle} from "../HeaderElements";
 
 export interface IGoalsSection {
 
@@ -24,7 +25,7 @@ export default function RoadmapSection(props: IGoalsSection) {
     return (
         <Container>
             <ContainerWrapper>
-                <Header>Roadmap</Header>
+                <SectionTitle>Rarities</SectionTitle>
             </ContainerWrapper>
         </Container>
     )

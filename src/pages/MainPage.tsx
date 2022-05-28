@@ -3,19 +3,22 @@ import HeroSection from "../components/sections/HeroSection";
 import styled from "styled-components";
 import SlideSection from "../components/sections/SlideSection";
 import RoadmapSection from "../components/sections/RoadmapSection";
-import wuschelBackground from '../images/hero/background_green_brown_wuschel.png'
-import wuschelBackgroundTest from '../images/hero/background_green_brown_wuschel_test.png'
+import heroBackground from '../images/hero/background_green_brown_wuschel.png'
+import roadmapBackground from '../images/background_orange.png'
 
 
 function MainPage() {
 
     return (
         <MainPageContainer>
-            <BackgroundWrapper img={wuschelBackground}>
+            <BackgroundWrapper img={heroBackground}>
                 <HeroSection />
                 <SlideSection />
             </BackgroundWrapper>
-            <RoadmapSection />
+
+            <BackgroundWrapper img={roadmapBackground}>
+                <RoadmapSection />
+            </BackgroundWrapper>
 
         </MainPageContainer>
     );
@@ -38,8 +41,6 @@ export const BackgroundWrapper = styled.div<IBackgroundWrapper>`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  //height: 100vh;
-  max-height: 1900px;
   position: relative;
   overflow: hidden;
 `
