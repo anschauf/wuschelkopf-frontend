@@ -2,7 +2,7 @@ import React from 'react';
 import HeroSection from "../components/sections/HeroSection";
 import styled from "styled-components";
 import SlideSection from "../components/sections/SlideSection";
-import RoadmapSection from "../components/sections/RoadmapSection";
+import Index from "../components/sections/RoadmapSection";
 import heroBackground from '../images/hero/background_green_brown_wuschel.png'
 import roadmapBackground from '../images/background_orange.png'
 
@@ -17,7 +17,7 @@ function MainPage() {
             </BackgroundWrapper>
 
             <BackgroundWrapper img={roadmapBackground}>
-                <RoadmapSection />
+                <Index />
             </BackgroundWrapper>
 
         </MainPageContainer>

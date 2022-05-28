@@ -1,16 +1,23 @@
+
+
 export const myColors = {
     primary: '#671b8d',
     secondary: '#f66804',
     danger: '#a5f311',
+    lime: '#89ba2e',
+    light_purple: '#be84db',
     black: '#000',
     almost_black: '#010606',
     dark_grey: '#181818',
     middle_grey: '#2d2d2d',
     light_grey: '#656464',
+    very_light_grey: '#e8e7e7',
     light_grey_darker: '#525252',
     white: '#fff',
     old_white: '#faebd7',
     light_brown: '#671b8d',
+
+
 
     // external
     twitter_blue: '#1DA1F2',
