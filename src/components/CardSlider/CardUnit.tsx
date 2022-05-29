@@ -56,7 +56,7 @@ function getHighlightColor(version: string) {
 function getImageBackColor(version: string) {
     switch (version) {
         case 'orange':
-            return myColors.secondary;
+            return myColors.background_orange;
         case 'green':
             return myColors.lime;
         default:

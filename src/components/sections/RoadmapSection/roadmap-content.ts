@@ -7,6 +7,11 @@ import IMG_SKIN_LIGHT from '../../../images/card-slider/skin_light.png'
 import IMG_SKIN_GHOST from '../../../images/card-slider/skin_ghost.png'
 import IMG_SKIN_SKELETT from '../../../images/card-slider/skin_skelett.png'
 
+import IMG_HAIR_NORMAL from '../../../images/card-slider/hair_normal.png'
+import IMG_HAIR_SHINING from '../../../images/card-slider/hair_shining.png'
+import IMG_HAIR_RAINBOW from '../../../images/card-slider/hair_rainbow.png'
+import IMG_HAIR_BURNING from '../../../images/card-slider/hair_burning.png'
+
 
 
 export const skinRarities: ICardUnit[] = [
@@ -43,53 +48,32 @@ export const skinRarities: ICardUnit[] = [
 
 export const hairRarities: ICardUnit[] = [
     {
-        'image': Image40,
+        'image': IMG_HAIR_NORMAL,
         'label': '25% Drop chance',
-        'title': 'LIGHT',
+        'title': 'NORMAL',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
         'version': "orange"
     },
     {
-        'image': Image40,
+        'image': IMG_HAIR_RAINBOW,
         'label': '25% Drop chance',
-        'title': 'LIGHT',
+        'title': 'RAINBOW',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
         'version': "orange"
     },
     {
-        'image': Image40,
+        'image': IMG_HAIR_SHINING,
         'label': '25% Drop chance',
-        'title': 'LIGHT',
+        'title': 'SHINING',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
         'version': "orange"
 
     },
     {
-        'image': Image40,
+        'image': IMG_HAIR_BURNING,
         'label': '25% Drop chance',
-        'title': 'LIGHT',
+        'title': 'BURNING',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
         'version': "orange"
-    },
-    {
-        'image': Image40,
-        'label': '25% Drop chance',
-        'title': 'LIGHT',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
-        'version': "orange"
-    },
-    {
-        'image': Image40,
-        'label': '25% Drop chance',
-        'title': 'LIGHT',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
-        'version': 'orange'
-    },
-    {
-        'image': Image40,
-        'label': '25% Drop chance',
-        'title': 'LIGHT',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.',
-        'version': 'orange'
     }
 ]

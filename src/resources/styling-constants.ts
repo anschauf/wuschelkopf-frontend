@@ -24,7 +24,7 @@ export const myColors = {
     // rarities section colors --> additional color shades
     background_orange: '#fca575',
     highlight_orange: '#fd7000',
-    highlight_purple: '#da04fc',
+    highlight_purple: '#a003b9',
     background_green: '#d1eca1',
 
 
