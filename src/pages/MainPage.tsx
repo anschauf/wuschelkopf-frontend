@@ -2,9 +2,11 @@ import React from 'react';
 import HeroSection from "../components/sections/HeroSection";
 import styled from "styled-components";
 import SlideSection from "../components/sections/SlideSection";
-import Index from "../components/sections/RaritiesSection";
+import RaritiesSection from "../components/sections/RaritiesSection";
 import heroBackground from '../images/hero/background_green_brown_wuschel.png'
-import roadmapBackground from '../images/background_orange.png'
+import backgroundOrange from '../images/background_orange.png'
+import backgroundGreenCentered from '../images/background_green_centered.png'
+import TeamSection from "../components/sections/TeamSection";
 
 
 function MainPage() {
@@ -14,10 +16,14 @@ function MainPage() {
             <BackgroundWrapper img={heroBackground}>
                 <HeroSection />
                 <SlideSection />
+
             </BackgroundWrapper>
 
-            <BackgroundWrapper img={roadmapBackground}>
-                <Index />
+            <BackgroundWrapper img={backgroundOrange}>
+                <RaritiesSection />
+            </BackgroundWrapper>
+            <BackgroundWrapper img={backgroundGreenCentered}>
+                <TeamSection />
             </BackgroundWrapper>
 
         </MainPageContainer>

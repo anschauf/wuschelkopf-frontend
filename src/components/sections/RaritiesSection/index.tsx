@@ -21,7 +21,7 @@ export interface IRaritiesSection {
 
 }
 
-export default function Index(props: IRaritiesSection) {
+export default function RaritiesSection(props: IRaritiesSection) {
 
 
 

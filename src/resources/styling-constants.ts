@@ -5,6 +5,7 @@ export const myColors = {
     secondary: '#f66804',
     danger: '#a5f311',
     lime: '#89ba2e',
+    dark_lime: '#5d7e1f',
     light_purple: '#be84db',
     ultra_light_purple: '#d0a6e5',
     light_orange: '#fe8d4f',

@@ -45,7 +45,7 @@ export const CardContent = styled.div`
 export const ImageWrapper = styled.div`
   height:   280px;
   width:   280px;
-  border-radius: 50%;
+  //border-radius: 50%;
   
 `
 
@@ -53,7 +53,7 @@ export const CardImage = styled.img<IColor>`
   height:   100%;
   width:   100%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: ${({pickedColor = myColors.primary}) => pickedColor};
 `
 

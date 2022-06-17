@@ -58,7 +58,7 @@ function getImageBackColor(version: string) {
         case 'orange':
             return myColors.background_orange;
         case 'green':
-            return myColors.lime;
+            return myColors.background_green;
         default:
             return myColors.light_purple;
     }
