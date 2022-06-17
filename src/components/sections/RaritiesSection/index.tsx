@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {SectionTitle} from "../../HeaderElements";
+import {SectionTitle, SubTitle} from "../../HeaderElements";
 
 import CardSlider from "../../CardSlider";
 // import required modules
@@ -9,13 +9,19 @@ import CardSlider from "../../CardSlider";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {hairRarities, skinRarities} from "./roadmap-content";
+import {
+    hairdecoRarities,
+    hairExtensionsRarities,
+    hairRarities,
+    handItemRarities,
+    skinRarities
+} from "./rarities-content";
 
-export interface IGoalsSection {
+export interface IRaritiesSection {
 
 }
 
-export default function Index(props: IGoalsSection) {
+export default function Index(props: IRaritiesSection) {
 
 
 
@@ -23,8 +29,16 @@ export default function Index(props: IGoalsSection) {
         <Container>
             <ContainerWrapper>
                 <SectionTitle>Rarities</SectionTitle>
+                <SubTitle>Skin</SubTitle>
                 <CardSlider cardContents={skinRarities}/>
+                <SubTitle>Hair</SubTitle>
                 <CardSlider cardContents={hairRarities}/>
+                <SubTitle>Hand-Item</SubTitle>
+                <CardSlider cardContents={handItemRarities}/>
+                <SubTitle>Hair-Extension</SubTitle>
+                <CardSlider cardContents={hairExtensionsRarities}/>
+                {/*<SubTitle>Hair-Deco</SubTitle>*/}
+                {/*<CardSlider cardContents={hairdecoRarities}/>*/}
             </ContainerWrapper>
         </Container>
     )
@@ -35,7 +49,7 @@ const Container = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 1600px;
+  height: 3200px;
 
   position: relative;
   overflow: hidden;
