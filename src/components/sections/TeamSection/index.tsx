@@ -114,10 +114,13 @@ export default function TeamSection(props: ITeamSection) {
 }
 
 const Container = styled.div`
+  @media screen and (max-width: ${pageSizes.md}) {
+    height: 900px;
+  }
+  height: 1300px;
   background-position: initial;
   background-repeat: no-repeat;
   background-size: auto;
-  height: 1000px;
 
   position: relative;
   overflow: hidden;
