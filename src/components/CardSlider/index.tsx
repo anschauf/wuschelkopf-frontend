@@ -57,7 +57,7 @@ export default function CardSlider(props: ICardSlider) {
                 >
                     {
                         cardContents.map( c => {return (
-                                <SwiperSlide>
+                                <SwiperSlide key={c.title}>
                                     <CardUnit {...c} />
                                 </SwiperSlide>
                             )

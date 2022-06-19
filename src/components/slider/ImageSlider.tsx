@@ -30,15 +30,13 @@ export default function ImageSlider(props: IImageSlider) {
 
     const imgCount: number = doubledImageInfos.length
 
-    console.log(imgCount)
-
     return (
         <Slider imgSize={imageSize} hasBorderShadow={hasBorderShadow} rightDirection={rightDirection}>
             <SlideTrack imgSize={imageSize} imgCount={imgCount} speed={speed} rightDirection={rightDirection}>
                 {
-                    doubledImageInfos.map(dImgInfo => {
+                    doubledImageInfos.map((dImgInfo, index) => {
                         return (
-                            <Slide imgSize={imageSize} padding={betweenPadding}>
+                            <Slide imgSize={imageSize} padding={betweenPadding} key={`${dImgInfo.alt}-${index}`}>
                                 <SlideImage src={dImgInfo.image} alt={dImgInfo.alt} />
                             </Slide>
                         )

@@ -27,6 +27,7 @@ const members =
             name={"SirBongo"}
             description={"Co-Founder and creator of Wuschelkopfs, bafjgjajagn vsajdgsheh sghdsh ehghsedgn asdfhseh"}
             color={'orange'}
+            key={'SirBongo'}
         />,
         <TeamMemberCard
             img={IMG_SKIN_LIGHT}
@@ -34,6 +35,7 @@ const members =
             name={"SirBongo"}
             description={"Co-Founder and creator of Wuschelkopfs"}
             color={'green'}
+            key={'Two'}
         />,
         <TeamMemberCard
             img={IMG_SKIN_LIGHT}
@@ -41,6 +43,7 @@ const members =
             name={"SirBongo"}
             description={"Co-Founder and creator of Wuschelkopfs"}
             color={'purple'}
+            key={'Three'}
         />,
         <TeamMemberCard
             img={IMG_SKIN_LIGHT}
@@ -48,6 +51,7 @@ const members =
             name={"SirBongo"}
             description={"Co-Founder and creator of Wuschelkopfs"}
             color={'purple'}
+            key={'Four'}
         />,
         <TeamMemberCard
             img={IMG_SKIN_LIGHT}
@@ -55,6 +59,7 @@ const members =
             name={"SirBongo"}
             description={"Co-Founder and creator of Wuschelkopfs"}
             color={'orange'}
+            key={'Five'}
         />
     ]
 export default function TeamSection(props: ITeamSection) {
@@ -99,7 +104,7 @@ export default function TeamSection(props: ITeamSection) {
                 >
                     {
                         members.map(m => {return (
-                          <SwiperSlide>
+                          <SwiperSlide key={m.key}>
                               {m}
                           </SwiperSlide>
                         )

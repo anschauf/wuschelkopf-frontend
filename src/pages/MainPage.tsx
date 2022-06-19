@@ -7,6 +7,7 @@ import heroBackground from '../images/hero/background_green_brown_wuschel.png'
 import backgroundOrange from '../images/background_orange.png'
 import backgroundGreenCentered from '../images/background_green_centered.png'
 import TeamSection from "../components/sections/TeamSection";
+import FaqSection from "../components/sections/FaqSection";
 
 
 function MainPage() {
@@ -24,8 +25,8 @@ function MainPage() {
             </BackgroundWrapper>
             <BackgroundWrapper img={backgroundGreenCentered}>
                 <TeamSection />
+                <FaqSection />
             </BackgroundWrapper>
-
         </MainPageContainer>
     );
 }
