@@ -54,5 +54,7 @@ export const fontSizes = {
     title_lg: '60px',
     title_sm: '48px',
     title_s: '40px',
-    title_xs: '36px'
+    title_xs: '36px',
+    default_m: '24px',
+    default_l: '36px'
 }

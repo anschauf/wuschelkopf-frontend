@@ -21,8 +21,9 @@ export default function Accordion(props: IAccordeon) {
         if(clicked === i) {
             // if clicked question is already active, then close it
             setClicked(-1)
+        } else {
+            setClicked(i)
         }
-        setClicked(i)
     }
 
     return (
@@ -92,8 +93,8 @@ const QuestionWrap = styled.div`
 `
 
 const QuestionTitle = styled.h1`
-  padding: ${spacing.default}
-  font-size: ${fontSizes.title_xl};
+  padding: ${spacing.default};
+  font-size: ${fontSizes.default_m};
 `
 
 const AnswerParagraph = styled.p`
