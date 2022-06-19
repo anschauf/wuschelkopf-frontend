@@ -75,6 +75,7 @@ const AccordeonElementContainer = styled.div`
     width: 100%;
   }
   width: ${pageSizes.lg};
+  background-color: ${myColors.light_lime};
   
 `
 
@@ -99,6 +100,7 @@ const QuestionTitle = styled.h1`
 
 const AnswerParagraph = styled.p`
     padding: ${spacing.double};
+  color: ${myColors.light_grey_darker};
 `
 
 const Dropdown = styled.p`
