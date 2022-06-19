@@ -29,3 +29,11 @@ export const SubTitle = styled.h3<IColor>`
   font-family: 'Permanent Marker', cursive;
   font-weight: normal;
 `
+
+export const SmallTitle = styled.h4<IColor>`
+  color: ${({pickedColor = myColors.primary}) => pickedColor};
+  padding-top: ${spacing.default};
+  font-size: ${fontSizes.title_xs};
+  font-family: 'Permanent Marker', cursive;
+  font-weight: lighter;
+`

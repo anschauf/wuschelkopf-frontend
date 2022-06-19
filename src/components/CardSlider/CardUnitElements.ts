@@ -29,8 +29,8 @@ export const Card = styled.div<IColor>`
   background: ${({pickedColor = myColors.light_purple}) => pickedColor};
   border-radius: 10%;
   margin:  ${spacing.double} 0;
-  width: 360px;
-  height: 530px;
+  width: 320px;
+  height: 500px;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
 
@@ -43,8 +43,8 @@ export const CardContent = styled.div`
 `
 
 export const ImageWrapper = styled.div`
-  height:   280px;
-  width:   280px;
+  height:   250px;
+  width:   250px;
   //border-radius: 50%;
   
 `

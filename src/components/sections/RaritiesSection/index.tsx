@@ -16,6 +16,7 @@ import {
     handItemRarities,
     skinRarities
 } from "./rarities-content";
+import {pageSizes} from "../../../resources/styling-constants";
 
 export interface IRaritiesSection {
 
@@ -29,16 +30,20 @@ export default function RaritiesSection(props: IRaritiesSection) {
         <Container>
             <ContainerWrapper>
                 <SectionTitle>Rarities</SectionTitle>
-                <SubTitle>Skin</SubTitle>
-                <CardSlider cardContents={skinRarities}/>
-                <SubTitle>Hair</SubTitle>
-                <CardSlider cardContents={hairRarities}/>
-                <SubTitle>Hand-Item</SubTitle>
-                <CardSlider cardContents={handItemRarities}/>
-                <SubTitle>Hair-Extension</SubTitle>
-                <CardSlider cardContents={hairExtensionsRarities}/>
-                {/*<SubTitle>Hair-Deco</SubTitle>*/}
-                {/*<CardSlider cardContents={hairdecoRarities}/>*/}
+                <RowWrapper>
+                    <CardSlider widthMode={'half'} title={'Skin'} cardContents={skinRarities}/>
+                    <CardSlider widthMode={'half'} title={'Hair'} cardContents={hairRarities}/>
+                </RowWrapper>
+                <RowWrapper>
+                    <CardSlider widthMode={'half'} title={'Hand-Item'} cardContents={handItemRarities}/>
+                    <CardSlider widthMode={'half'} title={'Hair-Extension'} cardContents={hairExtensionsRarities}/>
+                </RowWrapper>
+                <ColumnWrapper>
+                    <CardSlider title={'Skin'} cardContents={skinRarities}/>
+                    <CardSlider title={'Hair'} cardContents={hairRarities}/>
+                    <CardSlider title={'Hand-Item'} cardContents={handItemRarities}/>
+                    <CardSlider title={'Hair-Extension'} cardContents={hairExtensionsRarities}/>
+                </ColumnWrapper>
             </ContainerWrapper>
         </Container>
     )
@@ -46,10 +51,15 @@ export default function RaritiesSection(props: IRaritiesSection) {
 
 
 const Container = styled.div`
+  @media screen and (max-width: ${pageSizes.md}) {
+    height: 3200px;
+  }
+  height: 1900px;
+  
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 3200px;
+
 
   position: relative;
   overflow: hidden;
@@ -67,4 +77,26 @@ const ContainerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 50px;
+`
+
+export const RowWrapper = styled.div`
+
+  @media screen and (max-width: ${pageSizes.md}) {
+    display: none;
+  }
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+
+`
+
+export const ColumnWrapper = styled.div`
+  @media screen and (max-width: ${pageSizes.md}) {
+    display: flex;
+  }
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
