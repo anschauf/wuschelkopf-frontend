@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import {myColors} from "../../resources/styling-constants";
-import {Link as LinkScroll} from 'react-scroll'
+import {Link as LinkScroll, animateScroll as scroll} from 'react-scroll'
 import {pageSizes} from '../../resources/styling-constants'
 
 

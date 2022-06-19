@@ -17,6 +17,7 @@ import {
     WindWheel,
     TitleWrapper
 } from './HeroElements';
+import {homeRoute} from '../../../GlobalConstants'
 
 export interface IHero {
 

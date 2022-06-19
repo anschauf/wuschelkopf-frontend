@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Accordion from "../../Accordion";
 import styled from "styled-components";
 import {Data} from "./questions"
+import {faqRoute} from "../../../GlobalConstants";
 
 import {SectionTitle} from "../../HeaderElements";
 export interface IFaqSection {
@@ -13,7 +14,7 @@ export default function FaqSection(props: IFaqSection) {
 
     return (
         <Container>
-            <SectionTitle>FAQs</SectionTitle>
+            <SectionTitle className={faqRoute}>FAQs</SectionTitle>
             <Accordion questions={Data}/>
         </Container>
     )

@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from "./components/Navbar";
 import MainPage from "./pages/MainPage";
 import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 function App() {
     const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -18,6 +19,7 @@ function App() {
             <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
             <NavBar toggleIsOpen={toggleIsOpen}/>
             <MainPage />
+            <Footer />
         </BrowserRouter>
 
     </div>

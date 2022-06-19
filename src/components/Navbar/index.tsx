@@ -38,21 +38,52 @@ export default function NavBar(props: INavBar) {
                         <NavLogo to={"/"} children={
                             <Logo src={logo} />}
                         />
-                            <NavMenu>
+                            <NavMenu className={homeRoute}>
                                 <NavItem>
-                                    <NavLinks to={homeRoute}>Home</NavLinks>
+                                    <NavLinks
+                                        // activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        to={homeRoute}
+                                    >
+                                        Home
+                                    </NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks to={roadmapRoute}>Roadmap</NavLinks>
+                                    <NavLinks
+                                        // activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        to={roadmapRoute}>Roadmap</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks to={rarityRoute}>Rarity</NavLinks>
+                                    <NavLinks
+                                        // activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        to={rarityRoute}
+                                    >Rarity</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks to={teamRoute}>Team</NavLinks>
+                                    <NavLinks
+                                        // activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        to={teamRoute}
+                                    >Team</NavLinks>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLinks to={faqRoute}>FAQ</NavLinks>
+                                    <NavLinks
+                                        // activeClass="active"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        to={faqRoute}
+                                    >FAQ</NavLinks>
                                 </NavItem>
                             </NavMenu>
                     </NavLogoLinkWrapper>

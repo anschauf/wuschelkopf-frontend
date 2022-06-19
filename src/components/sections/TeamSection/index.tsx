@@ -14,6 +14,7 @@ import {pageSizes, spacing} from "../../../resources/styling-constants";
 import IMG_SKIN_LIGHT from '../../../images/slider/27.png'
 import {SectionTitle} from "../../HeaderElements";
 import {Navigation, Pagination} from "swiper";
+import {teamRoute} from "../../../GlobalConstants";
 
 export interface ITeamSection {
 
@@ -67,7 +68,7 @@ export default function TeamSection(props: ITeamSection) {
 
     return (
         <Container>
-            <SectionTitle>Team</SectionTitle>
+            <SectionTitle className={teamRoute}>Team</SectionTitle>
             <ScreenRow>
                 {members[0]}
                 {members[1]}

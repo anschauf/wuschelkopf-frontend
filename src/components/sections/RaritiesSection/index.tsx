@@ -17,6 +17,7 @@ import {
     skinRarities
 } from "./rarities-content";
 import {pageSizes} from "../../../resources/styling-constants";
+import {rarityRoute} from "../../../GlobalConstants";
 
 export interface IRaritiesSection {
 
@@ -29,7 +30,7 @@ export default function RaritiesSection(props: IRaritiesSection) {
     return (
         <Container>
             <ContainerWrapper>
-                <SectionTitle>Rarities</SectionTitle>
+                <SectionTitle className={rarityRoute}>Rarities</SectionTitle>
                 <RowWrapper>
                     <CardSlider widthMode={'half'} title={'Skin'} cardContents={skinRarities}/>
                     <CardSlider widthMode={'half'} title={'Hair'} cardContents={hairRarities}/>
