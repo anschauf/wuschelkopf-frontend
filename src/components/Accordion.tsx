@@ -98,7 +98,7 @@ const QuestionTitle = styled.h1`
   font-size: ${fontSizes.default_m};
 `
 
-const AnswerParagraph = styled.p`
+const AnswerParagraph = styled.div`
     padding: ${spacing.double};
   color: ${myColors.light_grey_darker};
 `

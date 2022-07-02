@@ -3,14 +3,19 @@ import {IAccordeonData} from "../../Accordion";
 export const Data = [
     {
         question: 'What is a NFT',
-        answer: 'NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.'
+        answer: 'By now you surely have already heard of it. If not: NFT stands for "Non-fungible token". That again means that it is a unique digital item. This unique item is what YOU can buy here and trad whenever you want.'
     },
     {
-        question: 'What is Metamask',
-        answer: 'Metamask is a crypto-wallet that can store your Ethereum, and is needed to purchase and mint a Baby Ghost. Having a wallet gives you an Ethereum address (i.e. 0xSPOO….666), this is where your NFT will be stored. Learn more about Metamask and how easy it is to use over here! (https://metamask.io).'
+        question: 'What is a Wuschelkopf',
+        answer: 'A digital art of a tousled character. The art images are generated algorithmically. Usually they are funny looking guys and girls, but there are rarer ghost and skeleton versions.'
     },
     {
-        question: 'How to mint with Metamask from a mobile phone?',
-        answer: 'If you are using a mobile phone to mint our lovely Baby Ghosts, you need to use the Metamask application built-in browser to mint our NFTs. Therefore, please launch the Metamask application, click the 3 lines on the top left menu in the application and select "Browser". It will open a web browser and you will be able to navigate back to babyghosts.com to do the minting.'
+        question: 'How do I get a Wuschelkopf?',
+        answer: 'First, download and install the browser plugin called MetaMask. This will allow you to buy NFTs from Websites as this one.\n\n Secondly, you can either mint directly here a brand new Wuschelkopf or buy one from Opensea.io'
     },
+    {
+        question: 'What is MetaMask',
+        answer: 'A crypto-wallet in which you can store your Ethereum. This Plug-In is necessary to buy a Wuschelkopf. By creating a wallet you will also own a Ethereum address, where your NFTs will be stored.\n Learn more about Metamask here:\n (https://metamask.io)'
+    },
+
 ]

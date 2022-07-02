@@ -28,7 +28,7 @@ const members =
         <TeamMemberCard
             img={IMG_SIR_BONGO}
             role={"Zenmaster"}
-            name={"SirBongo"}
+            name={"Sir Bongo"}
             description={"Creative creator of Wuschelkopfs. Mastermind of the concept and the art design"}
             color={'orange'}
             key={'SirBongo'}
@@ -38,15 +38,15 @@ const members =
             role={"Gurudevi"}
             name={"Chi-J"}
             description={"Webdesign and Socia media star."}
-            color={'green'}
+            color={'purple'}
             key={'Two'}
         />,
         <TeamMemberCard
             img={IMG_ANSCHAU}
             role={"Sensei"}
-            name={"Anschau"}
+            name={"An-Shaw"}
             description={"Automatic generation and Smart contract"}
-            color={'purple'}
+            color={'orange'}
             key={'Three'}
         />,
     ]
