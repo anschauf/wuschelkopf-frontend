@@ -11,7 +11,10 @@ import styled from "styled-components";
 import TeamMemberCard from "../../TeamMemberCard";
 import {pageSizes, spacing} from "../../../resources/styling-constants";
 
-import IMG_SKIN_LIGHT from '../../../images/slider/27.png'
+import IMG_SIR_BONGO from '../../../images/team/sirbongo.png'
+import IMG_CHI_J from '../../../images/team/chij.png'
+import IMG_ANSCHAU from '../../../images/team/anschau.png'
+
 import {SectionTitle} from "../../HeaderElements";
 import {Navigation, Pagination} from "swiper";
 import {teamRoute} from "../../../GlobalConstants";
@@ -23,45 +26,29 @@ export interface ITeamSection {
 const members =
     [
         <TeamMemberCard
-            img={IMG_SKIN_LIGHT}
+            img={IMG_SIR_BONGO}
             role={"Zenmaster"}
             name={"SirBongo"}
-            description={"Co-Founder and creator of Wuschelkopfs, bafjgjajagn vsajdgsheh sghdsh ehghsedgn asdfhseh"}
+            description={"Creative creator of Wuschelkopfs. Mastermind of the concept and the art design"}
             color={'orange'}
             key={'SirBongo'}
         />,
         <TeamMemberCard
-            img={IMG_SKIN_LIGHT}
-            role={"Zenmaster"}
-            name={"SirBongo"}
-            description={"Co-Founder and creator of Wuschelkopfs"}
+            img={IMG_CHI_J}
+            role={"Gurudevi"}
+            name={"Chi-J"}
+            description={"Webdesign and Socia media star."}
             color={'green'}
             key={'Two'}
         />,
         <TeamMemberCard
-            img={IMG_SKIN_LIGHT}
-            role={"Zenmaster"}
-            name={"SirBongo"}
-            description={"Co-Founder and creator of Wuschelkopfs"}
+            img={IMG_ANSCHAU}
+            role={"Sensei"}
+            name={"Anschau"}
+            description={"Automatic generation and Smart contract"}
             color={'purple'}
             key={'Three'}
         />,
-        <TeamMemberCard
-            img={IMG_SKIN_LIGHT}
-            role={"Zenmaster"}
-            name={"SirBongo"}
-            description={"Co-Founder and creator of Wuschelkopfs"}
-            color={'purple'}
-            key={'Four'}
-        />,
-        <TeamMemberCard
-            img={IMG_SKIN_LIGHT}
-            role={"Zenmaster"}
-            name={"SirBongo"}
-            description={"Co-Founder and creator of Wuschelkopfs"}
-            color={'orange'}
-            key={'Five'}
-        />
     ]
 export default function TeamSection(props: ITeamSection) {
     const {} = props;
@@ -123,7 +110,7 @@ const Container = styled.div`
   @media screen and (max-width: ${pageSizes.md}) {
     height: 900px;
   }
-  height: 1300px;
+  height: 1200px;
   background-position: initial;
   background-repeat: no-repeat;
   background-size: auto;
