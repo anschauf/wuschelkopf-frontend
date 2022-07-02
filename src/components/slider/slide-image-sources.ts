@@ -1,42 +1,46 @@
-// images sources one
-import Image03 from '../../images/slider/03.png'
-import Image05 from '../../images/slider/05.png'
-import Image07 from '../../images/slider/07.png'
-import Image13 from '../../images/slider/13.png'
-import Image14 from '../../images/slider/14.png'
-import Image17 from '../../images/slider/17.png'
-import Image25 from '../../images/slider/25.png'
-import Image27 from '../../images/slider/27.png'
-import Image30 from '../../images/slider/30.png'
-import Image31 from '../../images/slider/31.png'
-import Image33 from '../../images/slider/33.png'
-import Image37 from '../../images/slider/37.png'
+// first line
+import Image21 from '../../images/slider/adam_joint.png'
+import Image22 from '../../images/slider/hero_male.png'
+import Image23 from '../../images/slider/hair_Green_male.png'
+import Image24 from '../../images/slider/disco.png'
+import Image25 from '../../images/slider/domina.png'
+import Image26 from '../../images/slider/elegant.png'
+import Image27 from '../../images/slider/fairy.png'
+import Image28 from '../../images/slider/ghost_rider.png'
+import Image29 from '../../images/slider/pride_oger.png'
+import Image221 from '../../images/slider/dead_eva.png'
+import Image222 from '../../images/slider/hero_female.png'
+import Image223 from '../../images/slider/burning_straw.png'
 
-// images sources two
-import Image38 from '../../images/slider/38.png'
-import Image54 from '../../images/slider/54.png'
-import Image57 from '../../images/slider/57.png'
-import Image71 from '../../images/slider/71.png'
-import Image73 from '../../images/slider/73.png'
-import Image77 from '../../images/slider/77.png'
-import Image85 from '../../images/slider/85.png'
-import Image86 from '../../images/slider/86.png'
-import Image92 from '../../images/slider/92.png'
-import Image93 from '../../images/slider/93.png'
-import Image96 from '../../images/slider/96.png'
-import Image97 from '../../images/slider/97.png'
+// second line
+import Image31 from '../../images/slider/hipster.png'
+import Image32 from '../../images/slider/jedi_ghost.png'
+import Image33 from '../../images/slider/joker_skeleton.png'
+import Image34 from '../../images/slider/mage_glasses.png'
+import Image35 from '../../images/slider/odd_ghost.png'
+import Image36 from '../../images/slider/z_einfachgeil.png'
+import Image37 from '../../images/slider/oger_joker.png'
+import Image38 from '../../images/slider/playboy.png'
+import Image39 from '../../images/slider/glowing_chrsitmas.png'
+import Image331 from '../../images/slider/puppet.png'
+import Image332 from '../../images/slider/python.png'
+import Image333 from '../../images/slider/skeleton_mage.png'
 
-import Image40 from '../../images/slider/40.png'
-import Image41 from '../../images/slider/41.png'
-import Image42 from '../../images/slider/42.png'
-import Image43 from '../../images/slider/43.png'
-import Image44 from '../../images/slider/44.png'
-import Image45 from '../../images/slider/45.png'
-import Image46 from '../../images/slider/46.png'
-import Image47 from '../../images/slider/47.png'
-import Image48 from '../../images/slider/48.png'
-import Image49 from '../../images/slider/49.png'
-import Image3_1 from '../../images/slider/3_1.png'
+
+// third line
+import Image41 from '../../images/slider/z_disco_drunk.png'
+import Image42 from '../../images/slider/z_disco_ghost.png'
+import Image43 from '../../images/slider/z_drunken_lepricon.png'
+import Image44 from '../../images/slider/oger_baby.png'
+import Image45 from '../../images/slider/z_illidan.png'
+import Image46 from '../../images/slider/z_odd_jedi.png'
+import Image47 from '../../images/slider/z_oger_mage.png'
+import Image48 from '../../images/slider/z_skeleton_mage.png'
+import Image49 from '../../images/slider/z_something.png'
+import Image441 from '../../images/slider/z_styler.png'
+import Image442 from '../../images/slider/z_swim_animals.png'
+import Image443 from '../../images/slider/z_woman.png'
+
 
 // Interface for images in the applied in the slider
 export interface IImageInfo {
@@ -50,110 +54,110 @@ export interface IImageInfo {
 
 export const imageSources_one: IImageInfo[]= [
     {
-        'image': Image03,
-        'alt': '03'
+        'image': Image21,
+        'alt': '21'
     },
     {
-        'image': Image05,
-        'alt': '05'
+        'image': Image22,
+        'alt': '22'
     },
     {
-        'image': Image07,
-        'alt': '07'
+        'image': Image23,
+        'alt': '23'
     },
     {
-        'image': Image13,
-        'alt': '13'
-    },
-    {
-        'image': Image14,
-        'alt': '14'
-    },
-    {
-        'image': Image17,
-        'alt': '17'
+        'image': Image24,
+        'alt': '24'
     },
     {
         'image': Image25,
         'alt': '25'
     },
     {
+        'image': Image26,
+        'alt': '26'
+    },
+    {
         'image': Image27,
         'alt': '27'
     },
     {
-        'image': Image30,
-        'alt': '30'
+        'image': Image28,
+        'alt': '28'
     },
+    {
+        'image': Image29,
+        'alt': '29'
+    },
+    {
+        'image': Image221,
+        'alt': '221'
+    },
+    {
+        'image': Image222,
+        'alt': '222'
+    },
+    {
+        'image': Image223,
+        'alt': '223'
+    },
+]
+
+export const imageSources_two: IImageInfo[]= [
     {
         'image': Image31,
         'alt': '31'
+    },
+    {
+        'image': Image32,
+        'alt': '32'
     },
     {
         'image': Image33,
         'alt': '33'
     },
     {
+        'image': Image34,
+        'alt': '34'
+    },
+    {
+        'image': Image35,
+        'alt': '35'
+    },
+    {
+        'image': Image36,
+        'alt': '36'
+    },
+    {
         'image': Image37,
         'alt': '37'
     },
-]
-
-export const imageSources_two: IImageInfo[]= [
     {
         'image': Image38,
         'alt': '38'
     },
     {
-        'image': Image54,
-        'alt': '54'
+        'image': Image39,
+        'alt': '39'
     },
     {
-        'image': Image57,
-        'alt': '57'
+        'image': Image331,
+        'alt': '331'
     },
     {
-        'image': Image71,
-        'alt': '71'
+        'image': Image332,
+        'alt': '332'
     },
     {
-        'image': Image73,
-        'alt': '73'
-    },
-    {
-        'image': Image77,
-        'alt': '77'
-    },
-    {
-        'image': Image85,
-        'alt': '85'
-    },
-    {
-        'image': Image86,
-        'alt': '86'
-    },
-    {
-        'image': Image92,
-        'alt': '92'
-    },
-    {
-        'image': Image93,
-        'alt': '93'
-    },
-    {
-        'image': Image96,
-        'alt': '96'
-    },
-    {
-        'image': Image97,
-        'alt': '97'
+        'image': Image333,
+        'alt': '333'
     },
 ]
 
 export const imageSources_three: IImageInfo[]= [
     {
-        'image': Image40,
-        'alt': '40'
+        'image': Image441,
+        'alt': '441'
     },
     {
         'image': Image41,
@@ -192,8 +196,12 @@ export const imageSources_three: IImageInfo[]= [
         'alt': '49'
     },
     {
-        'image': Image3_1,
-        'alt': '3_1'
+        'image': Image442,
+        'alt': '442'
+    },
+    {
+        'image': Image443,
+        'alt': '443'
     },
 
 ]
