@@ -37,13 +37,13 @@ export default function RaritiesSection(props: IRaritiesSection) {
                 </RowWrapper>
                 <RowWrapper>
                     <CardSlider widthMode={'half'} title={'Hand-Item'} cardContents={handItemRarities}/>
-                    <CardSlider widthMode={'half'} title={'Hair-Extension'} cardContents={hairExtensionsRarities}/>
+                    <CardSlider widthMode={'half'} title={'Hair-Style'} cardContents={hairExtensionsRarities}/>
                 </RowWrapper>
                 <ColumnWrapper>
                     <CardSlider title={'Skin'} cardContents={skinRarities}/>
                     <CardSlider title={'Hair'} cardContents={hairRarities}/>
                     <CardSlider title={'Hand-Item'} cardContents={handItemRarities}/>
-                    <CardSlider title={'Hair-Extension'} cardContents={hairExtensionsRarities}/>
+                    <CardSlider title={'Hair-Style'} cardContents={hairExtensionsRarities}/>
                 </ColumnWrapper>
             </ContainerWrapper>
         </Container>

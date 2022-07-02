@@ -160,7 +160,7 @@ export const hairExtensionsRarities: ICardUnit[] = [
     {
         'image': IMG_HAIREXTENSION_NONE,
         'label': '35% (m), 50% (f) Drop chance',
-        'title': 'None',
+        'title': 'Default',
         'description': 'Basic Wuschelkopf hair-cut. Simply stylish',
         'version': "purple"
     },
