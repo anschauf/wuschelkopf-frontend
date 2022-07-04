@@ -7,6 +7,7 @@ import {maxNumberOfMint} from "../GlobalConstants";
 import {MyButton} from "./ButtonElements";
 import Spinner from "./Spinner";
 import {myColors} from "../resources/styling-constants";
+import {mintNFT} from "../services/ethereum-service";
 
 export interface IMintModal {
     showMintModal: boolean,
@@ -29,11 +30,13 @@ export default function MintModal(props: IMintModal) {
     const mintClickHandler = async () => {
         console.log("Mint now!")
         setIsLoading(true)
-        // const mintResult = await mintNFT(numberOfMint)
-        // if(mintResult) {
-        //     console.log("MintResult", mintResult)
-        //     navigate(`..${accountRouteName}`)
-        // }
+        const mintResult = await mintNFT(numberOfMint)
+        if(mintResult) {
+            console.log("MintResult", mintResult)
+        } else {
+            console.log("Error with minting!")
+        }
+        setIsLoading(false)
         // // TODO handle mint success and error
     }
 
