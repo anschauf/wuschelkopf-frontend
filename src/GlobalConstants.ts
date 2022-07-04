@@ -5,3 +5,6 @@ export const roadmapRoute = 'roadmap'
 export const rarityRoute = 'rarity'
 export const teamRoute = 'team'
 export const faqRoute = 'faq'
+
+// Smart contract constants
+export const maxNumberOfMint = 5
