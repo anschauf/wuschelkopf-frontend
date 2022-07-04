@@ -22,6 +22,7 @@ import Modal from "../../Modal";
 import {BasicH3, TopLine} from '../../BasicElements';
 import IntegerInput from "../../IntegerInput";
 import styled from "styled-components";
+import MintModal from "../../MintModal";
 
 export interface IHero {
 
@@ -53,20 +54,7 @@ export default function HeroSection(props: IHero) {
                     <WindWheel src={wind_wheel} />
                 </FigureWrapper>
                 <TitleWrapper>
-                    <Modal showModal={showMintModal} toggleShowModal={toggleShowModal}>
-                        <>
-                            <TopLine>Mint Wuschelkopf NFTs</TopLine>
-                            <BasicH3 lightText={true}>How many NFTs?</BasicH3>
-                            <IntegerInput min={1} max={maxNumberOfMint} onValueChange={setNumberOfMint}/>
-                            <BtnWrapper>
-                                <MyButton
-                                    onClick={mintClickHandler}
-                                    minWidth={160}>
-                                    Mint
-                                </MyButton>
-                            </BtnWrapper>
-                        </>
-                    </Modal>
+                    <MintModal showMintModal={showMintModal} setShowMintModal={setShowMintModal} />
                     <HeroTitle>Wuschelkopf</HeroTitle>
                     <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
                     <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
