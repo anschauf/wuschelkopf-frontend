@@ -41,7 +41,7 @@ export async function mintNFT(numberToMint: number, address?: string) {
         return new Promise(async (resolve, reject) => {
             if(window.ethereum) {
                 const txn = await contract.methods.mintNFTs(numberToMint)
-                    .send({ from: fromAddress, value: utils.parseEther(mintingFee)});
+                    .send({ from: fromAddress, value: utils.parseEther((numberToMint * mintingFee).toString())});
                 resolve(txn)
             } else reject(noMetaMaskMessage)
         })
