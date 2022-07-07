@@ -8,6 +8,7 @@ import backgroundOrange from '../images/background_orange.png'
 import backgroundGreenCentered from '../images/background_green_centered.png'
 import TeamSection from "../components/sections/TeamSection";
 import FaqSection from "../components/sections/FaqSection";
+import {pageSizes} from "../resources/styling-constants";
 
 
 function MainPage() {
@@ -45,11 +46,15 @@ interface IBackgroundWrapper {
 
 export const BackgroundWrapper = styled.div<IBackgroundWrapper>`
   background-image:  url(${props => props.img});
-  background-position: center;
+  background-position: center -40px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: ${pageSizes.xl}) {
+    background-position: center;
+  }
 `
 
 export default MainPage;

@@ -75,13 +75,13 @@ export default function NavBar(props: INavBar) {
 
                     <NavMenu>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" arial-label="Discord" color={myColors.light_brown}>
+                        <SocialIconLink href="https://discord.gg/H7E2teR9Bh" target="_blank" arial-label="Discord" color={myColors.light_brown}>
                             <BsDiscord />
                         </SocialIconLink>
                         <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.light_brown}>
                             <OpenSeaIcon size={36}/>
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" arial-label="Twitter" color={myColors.light_brown}>
+                        <SocialIconLink href="https://twitter.com/WuschelkopfN" target="_blank" arial-label="Twitter" color={myColors.light_brown}>
                                 <AiFillTwitterCircle />
                         </SocialIconLink>
                     </SocialIcons>
