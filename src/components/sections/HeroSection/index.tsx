@@ -17,7 +17,6 @@ import {
     TitleWrapper,
     WindWheel
 } from './HeroElements';
-import styled from "styled-components";
 import MintModal from "../../MintModal";
 
 export interface IHero {
@@ -31,16 +30,6 @@ export default function HeroSection(props: IHero) {
     const toggleShowModal = () => {
         if(showMintModal) setNumberOfMint(1)
         setShowMintModal(!showMintModal)
-    }
-
-    const mintClickHandler = async () => {
-        console.log("Mint now!")
-        // const mintResult = await mintNFT(numberOfMint)
-        // if(mintResult) {
-        //     console.log("MintResult", mintResult)
-        //     navigate(`..${accountRouteName}`)
-        // }
-        // // TODO handle mint success and error
     }
 
     return (
@@ -63,8 +52,3 @@ export default function HeroSection(props: IHero) {
             </HeroContainer>
     )
 }
-
-const BtnWrapper = styled.div`
-    margin-top: 15px;
-`
-
