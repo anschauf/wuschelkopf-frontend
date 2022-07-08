@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {FaTimes} from 'react-icons/fa'
 import {NavLink} from 'react-router-dom'
 import {myColors} from "../../resources/styling-constants";
+import {Link as LinkScroll} from "react-scroll/modules";
 
 export interface ISidebarContainerProps{
     isOpen: boolean
@@ -53,7 +54,7 @@ export const SidebarMenu = styled.ul`
   }
 `
 
-export const SidebarLink = styled(NavLink)`
+export const SidebarLink = styled(LinkScroll)`
   display: flex;
   align-items: center;
   justify-content: center;

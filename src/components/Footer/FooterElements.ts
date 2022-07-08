@@ -10,18 +10,22 @@ export const FooterContainer = styled.footer`
 `
 
 export const FooterWrap = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   max-width: ${pageSizes.xl};
   margin: 0 auto;
+
+  @media screen and (max-width: ${pageSizes.md}) {
+    flex-direction: column;
+  }
 `
 
 export const FooterLogoLinkWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  
+  margin-bottom: ${spacing.default};
 `
 
 export const FooterLogo = styled(LinkScroll)`
@@ -34,6 +38,5 @@ export const Logo = styled.img`
 `
 
 export const FooterContentWrapper = styled.div`
-    
-
+  margin-bottom: ${spacing.default};
 `

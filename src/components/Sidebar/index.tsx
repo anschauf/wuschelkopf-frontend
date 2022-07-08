@@ -37,12 +37,6 @@ export default function Sidebar(props: ISidebar) {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to={homeRoute} onClick={toggleIsOpen}>
-                        Home
-                    </SidebarLink>
-                    <SidebarLink to={roadmapRoute} onClick={toggleIsOpen}>
-                        Goals
-                    </SidebarLink>
                     <SidebarLink to={rarityRoute} onClick={toggleIsOpen}>
                         Rarity
                     </SidebarLink>
