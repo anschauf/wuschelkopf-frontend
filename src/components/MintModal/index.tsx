@@ -14,7 +14,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import MintedImageSwiper from "./MintedImageSwiper";
+import MintedImageSwiper, {SubTitle, Title} from "./MintedImageSwiper";
 import MintingView from "./MintingView";
 
 
@@ -26,7 +26,9 @@ export interface IMintModal {
 export default function MintModal(props: IMintModal) {
     const {showMintModal, setShowMintModal} = props;
     const [numberOfMint, setNumberOfMint] = useState<number>(1)
-    const [mintedTokenIds, setMintedTokenIds] = useState<string[]>(['08','09','10'])
+    // const [mintedTokenIds, setMintedTokenIds] = useState<string[]>(['08','09','10'])
+    const [mintedTokenIds, setMintedTokenIds] = useState<string[]>([])
+    const [hasMintingError, setHasMintingError] = useState<boolean>(false)
 
 
     // component state    
@@ -49,17 +51,22 @@ export default function MintModal(props: IMintModal) {
 
     const mintClickHandler = async () => {
         setIsLoading(true)
+        try {
+            const mintResult = await mintNFT(numberOfMint)
+            if(mintResult) {
+                const tokenIds = extractTokenIds(mintResult)
 
-        const mintResult = await mintNFT(numberOfMint)
-        if(mintResult) {
-            console.log(mintResult)
-            const tokenIds = extractTokenIds(mintResult)
-
-            setMintedTokenIds(tokenIds)
-        } else {
+                setMintedTokenIds(tokenIds)
+            } else {
+                console.log("error")
+                setHasMintingError(true)
+            }
+        } catch (e) {
+            setHasMintingError(true)
         }
+
+        console.log("finished")
         setIsLoading(false)
-        // // TODO handle mint success and error
     }
 
 
@@ -71,16 +78,27 @@ export default function MintModal(props: IMintModal) {
 
             { isLoading ?
                 <LoadingWrapper>
-                    <LoadingStateText>{mintedTokenIds.length > 0 ?  "Loading minted NFTs..." : "Minting NFTs...."}</LoadingStateText>
+                    <LoadingStateText>{mintedTokenIds.length > 0 ?  "Loading minted NFTs..." : "Minting NFTs....Check your Metamask"}</LoadingStateText>
                     <Spinner color={myColors.primary} />
                 </LoadingWrapper>
                 :
                 <>
-                    { mintedTokenIds.length > 0 ?
-                        <MintedImageSwiper mintedTokenIds={mintedTokenIds}/>
-                        :
-                        <MintingView mintClickHandler={mintClickHandler} setNumberOfMint={setNumberOfMint} />
+                    {
+                        hasMintingError ?
+                        <>
+                            <SubTitle>An error occured during minting. Please try again!</SubTitle>
+                            <MyButton onClick={() => setShowMintModal(false)}>Ok</MyButton>
+                        </>
+                            :
+                        <>
+                            { mintedTokenIds.length > 0 ?
+                                <MintedImageSwiper mintedTokenIds={mintedTokenIds}/>
+                                :
+                                <MintingView mintClickHandler={mintClickHandler} setNumberOfMint={setNumberOfMint} />
+                            }
+                        </>
                     }
+
                 </>
 
             }

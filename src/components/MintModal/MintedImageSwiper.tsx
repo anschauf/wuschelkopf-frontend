@@ -94,6 +94,12 @@ export default function MintedImageSwiper(props: IMintedImageSwiper) {
     )
 }
 
+
+export const Title = styled.h1`
+  color: ${myColors.danger};
+  font-size: ${fontSizes.title_s};
+`
+
 interface IModalImage {
     displayImage: boolean
 }
@@ -103,7 +109,6 @@ const ModalImage = styled.img<IModalImage>`
     height: 300px;
     width: 300px;
 `
-
 
 const SpinnerWrapper = styled.div`
   width: 100%;
@@ -131,12 +136,8 @@ const ImageSwiperWrapper = styled.div`
   align-items: center;
 `
 
-const Title = styled.h1`
-  color: ${myColors.danger};
-  font-size: ${fontSizes.title_s};
-`
-
-const SubTitle = styled.h3`
+export const SubTitle = styled.h3`
+  margin-bottom: ${spacing.default};
   color: ${myColors.primary};
 `
 
