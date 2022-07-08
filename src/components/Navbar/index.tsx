@@ -20,6 +20,8 @@ import {myColors} from '../../resources/styling-constants'
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
 import logo from '../../images/wuschelkopf-logo.png'
 
+const REACT_APP_COLLECTION_URL = process.env.REACT_APP_COLLECTION_URL
+
 export interface INavBar {
     toggleIsOpen: () => void
 }
@@ -78,7 +80,7 @@ export default function NavBar(props: INavBar) {
                         <SocialIconLink href="https://discord.gg/H7E2teR9Bh" target="_blank" arial-label="Discord" color={myColors.light_brown}>
                             <BsDiscord />
                         </SocialIconLink>
-                        <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.light_brown}>
+                        <SocialIconLink href={REACT_APP_COLLECTION_URL} target="_blank" arial-label="OpenSea" color={myColors.light_brown}>
                             <OpenSeaIcon size={36}/>
                         </SocialIconLink>
                         <SocialIconLink href="https://twitter.com/WuschelkopfN" target="_blank" arial-label="Twitter" color={myColors.light_brown}>
