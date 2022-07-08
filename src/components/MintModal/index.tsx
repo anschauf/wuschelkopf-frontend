@@ -26,7 +26,7 @@ export interface IMintModal {
 export default function MintModal(props: IMintModal) {
     const {showMintModal, setShowMintModal} = props;
     const [numberOfMint, setNumberOfMint] = useState<number>(1)
-    const [mintedTokenIds, setMintedTokenIds] = useState<string[]>(['03','04','05'])
+    const [mintedTokenIds, setMintedTokenIds] = useState<string[]>(['08','09','10'])
 
 
     // component state    
@@ -48,7 +48,6 @@ export default function MintModal(props: IMintModal) {
     }
 
     const mintClickHandler = async () => {
-        console.log("Mint now!")
         setIsLoading(true)
 
         const mintResult = await mintNFT(numberOfMint)

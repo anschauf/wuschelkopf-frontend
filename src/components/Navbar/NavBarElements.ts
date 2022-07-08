@@ -160,16 +160,17 @@ export const SocialIcons = styled.div`
 
 export interface ISocialIconLink {
     color?: string
+    hoverColor?: string
 }
 export const SocialIconLink = styled.a<ISocialIconLink>`
   color: ${({color = myColors.white}) => `${color}}`};
   fill: ${({color = myColors.white}) => `${color}}`};
   font-size: 30px;
-  
+  text-decoration: none;
   &:hover {
     transition: all 0.2s ease-in-out;
-    color: ${myColors.white};
-    fill: ${myColors.white};
+    color: ${({hoverColor = myColors.white}) => `${hoverColor}`};
+    fill:  ${({hoverColor = myColors.white}) => `${hoverColor}`};
   }
 `
 

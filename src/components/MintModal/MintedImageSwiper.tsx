@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Spinner from "../Spinner";
-import {myColors, spacing} from "../../resources/styling-constants";
+import {fontSizes, myColors, spacing} from "../../resources/styling-constants";
 import styled from "styled-components";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";
@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import {SocialIconLink} from "../Navbar/NavBarElements";
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
+import { MyButton } from '../ButtonElements';
 
 const REACT_APP_API_IPFS_IMAGE_URL = process.env.REACT_APP_IPFS_IMAGE_URL
 const REACT_APP_OPENSEA_URL = process.env.REACT_APP_OPENSEA_URL
@@ -23,7 +24,7 @@ export interface IMintedImageSwiper {
 
 export default function MintedImageSwiper(props: IMintedImageSwiper) {
     const {mintedTokenIds} = props;
-    const [mintedImagesLoaded, setMintedImagesLoaded] = useState<boolean[]>([false,false,false])
+    const [mintedImagesLoaded, setMintedImagesLoaded] = useState<boolean[]>([])
 
     // all images are loaded from IPFS
     const isLoaded = (mintedImagesLoaded.every(e => e))
@@ -41,8 +42,14 @@ export default function MintedImageSwiper(props: IMintedImageSwiper) {
     }, [mintedTokenIds])
     return (
         <ImageSwiperWrapper>
-            <Title>Congratulations!</Title>
-            <SubTitle>Your brand new Wuschelkopf NFT{mintedTokenIds.length > 1 ? 's' : ''}:</SubTitle>
+            {isLoaded ?
+                <>
+                    <Title>Congratulations!</Title>
+                    <SubTitle>Your brand new Wuschelkopf NFT{mintedTokenIds.length > 1 ? 's' : ''}:</SubTitle>
+                </>
+                :
+                <SubTitle>Loading your newly minted NFT{mintedTokenIds.length > 1 ? 's' : ''}</SubTitle>
+            }
                 <SwiperContainer>
                     <Swiper
                         slidesPerView={1}
@@ -63,8 +70,15 @@ export default function MintedImageSwiper(props: IMintedImageSwiper) {
                                         <ModalImage displayImage={mintedImagesLoaded.every(entry => entry)} src={`${REACT_APP_API_IPFS_IMAGE_URL}/${id}.png`} alt={`Wuschelkopf NFT #${id}`} onLoad={() => updateLoadedState(index)}/>
                                         { isLoaded ?
                                             <SocialLinkWrapper>
-                                                <SocialIconLink href={`${REACT_APP_OPENSEA_URL}/${parseInt(id)}`} target="_blank" arial-label="OpenSea" color={myColors.danger}>
-                                                <OpenSeaIcon size={36}/>
+                                                <SocialIconLink href={`${REACT_APP_OPENSEA_URL}/${parseInt(id)}`} target="_blank" arial-label="OpenSea" color={myColors.white} hoverColor={myColors.primary}>
+                                                <MyButton>
+                                                    <IconWrapper>
+
+                                                        <OpenSeaIcon size={36}/>
+
+                                                    </IconWrapper>
+                                                    Check on Opensea
+                                                </MyButton>
                                                 </SocialIconLink>
                                             </SocialLinkWrapper>
                                             : null
@@ -119,6 +133,7 @@ const ImageSwiperWrapper = styled.div`
 
 const Title = styled.h1`
   color: ${myColors.danger};
+  font-size: ${fontSizes.title_s};
 `
 
 const SubTitle = styled.h3`
@@ -133,4 +148,9 @@ const SocialLinkWrapper = styled.div`
   margin-bottom: ${spacing.default};
   justify-content: center;
   align-items: center;
+`
+
+const IconWrapper = styled.div`
+    margin-top: 10px;
+    margin-right: ${spacing.default};
 `
