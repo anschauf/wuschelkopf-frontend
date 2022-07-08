@@ -17,10 +17,6 @@ import {
     TitleWrapper,
     WindWheel
 } from './HeroElements';
-import {maxNumberOfMint} from '../../../GlobalConstants'
-import Modal from "../../Modal";
-import {BasicH3, TopLine} from '../../BasicElements';
-import IntegerInput from "../../IntegerInput";
 import styled from "styled-components";
 import MintModal from "../../MintModal";
 

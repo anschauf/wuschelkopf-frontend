@@ -88,8 +88,8 @@ interface IModalWrapper {
     centered: boolean
 }
 const ModalWrapper = styled.div<IModalWrapper>`
-  width: 800px;
-  height: 500px;
+  width: 900px;
+  height: 562px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background-color: ${myColors.light_purple};
   background-image: url(${OgerImage});
