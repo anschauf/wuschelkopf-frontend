@@ -15,12 +15,17 @@ import {
     SocialIconLink,
     SocialIcons,
 } from "./NavBarElements";
-import {faqRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
+import {
+    opensea_collection_url,
+    faqRoute,
+    homeRoute,
+    rarityRoute,
+    teamRoute,
+    discord_channel_url, twitter_channel_url
+} from "../../GlobalConstants";
 import {myColors} from '../../resources/styling-constants'
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
 import logo from '../../images/wuschelkopf-logo.png'
-
-const REACT_APP_COLLECTION_URL = process.env.REACT_APP_COLLECTION_URL
 
 export interface INavBar {
     toggleIsOpen: () => void
@@ -77,13 +82,13 @@ export default function NavBar(props: INavBar) {
 
                     <NavMenu>
                     <SocialIcons>
-                        <SocialIconLink href="https://discord.gg/H7E2teR9Bh" target="_blank" arial-label="Discord" color={myColors.light_brown}>
+                        <SocialIconLink href={discord_channel_url} target="_blank" arial-label="Discord" color={myColors.primary}>
                             <BsDiscord />
                         </SocialIconLink>
-                        <SocialIconLink href={REACT_APP_COLLECTION_URL} target="_blank" arial-label="OpenSea" color={myColors.light_brown}>
+                        <SocialIconLink href={opensea_collection_url} target="_blank" arial-label="OpenSea" color={myColors.primary}>
                             <OpenSeaIcon size={36}/>
                         </SocialIconLink>
-                        <SocialIconLink href="https://twitter.com/WuschelkopfN" target="_blank" arial-label="Twitter" color={myColors.light_brown}>
+                        <SocialIconLink href={twitter_channel_url} target="_blank" arial-label="Twitter" color={myColors.primary}>
                                 <AiFillTwitterCircle />
                         </SocialIconLink>
                     </SocialIcons>

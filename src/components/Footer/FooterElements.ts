@@ -24,6 +24,7 @@ export const FooterWrap = styled.div`
 
 export const FooterLogoLinkWrapper = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: row;
   margin-bottom: ${spacing.default};
 `
@@ -38,5 +39,28 @@ export const Logo = styled.img`
 `
 
 export const FooterContentWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   margin-bottom: ${spacing.default};
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: ${pageSizes.md}) {
+    width: 100%;
+  }
+`
+
+export const RightsText = styled.div`
+  width: 100%;
+  text-align: end;
+  @media screen and (max-width: ${pageSizes.md}) {
+    text-align: center;
+  }
+`
+
+export const SocialIconWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
 `

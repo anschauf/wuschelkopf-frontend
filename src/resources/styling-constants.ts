@@ -19,7 +19,6 @@ export const myColors = {
     light_grey_darker: '#525252',
     white: '#fff',
     old_white: '#faebd7',
-    light_brown: '#671b8d',
 
 
     // rarities section colors --> additional color shades

@@ -48,7 +48,7 @@ export default function ImageSlider(props: IImageSlider) {
 }
 
 
-const smallImgSize = 250
+const smallImgSize = 200
 
 export interface ISlider {
     imgSize: number,

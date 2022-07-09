@@ -5,6 +5,7 @@ import {Link as LinkScroll} from 'react-scroll'
 
 
 const navbarSize = '120px'
+const smallNavbarSize = '80px'
 
 export const Nav = styled.nav`
   background: transparent;
@@ -57,6 +58,8 @@ export const NavLogo = styled(NavLink)`
 
   @media screen and (max-width: ${pageSizes.md}) {
     font-size: 1rem;
+    height: ${smallNavbarSize};
+    width: ${smallNavbarSize};
   }
 `
 

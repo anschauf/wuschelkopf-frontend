@@ -18,26 +18,34 @@ import {
     WindWheel
 } from './HeroElements';
 import MintModal from "../../MintModal";
-import moment from "moment";
 import styled from "styled-components";
-import {myColors, spacing} from "../../../resources/styling-constants";
+import {fontSizes, myColors, pageSizes, spacing} from "../../../resources/styling-constants";
 import {SocialIconLink} from "../../Navbar/NavBarElements";
 import {BsDiscord} from "react-icons/bs";
-import OpenSeaIcon from "../../../resources/OpenSeaIcon";
 import {AiFillTwitterCircle} from "react-icons/ai";
+import useDate from "react-use-date";
+import {countDownDay, countDownMounth, discord_channel_url, twitter_channel_url} from "../../../GlobalConstants";
 
 export interface IHero {
 
 }
 
-const REACT_APP_MINT_DROP_DATE = process.env.REACT_APP_MINT_DROP_DATE
-
 export default function HeroSection(props: IHero) {
     const [showMintModal, setShowMintModal] = useState<boolean>(false)
     const [numberOfMint, setNumberOfMint] = useState<number>(1)
 
-    const today = moment()
+    const today = useDate({ interval: 'hour' })
 
+    const countdownDateString =`${countDownDay.toString().length > 1 ? '' : '0'}${countDownDay}.${countDownMounth.toString().length > 1 ? '' : '0'}${countDownMounth}.2022`
+
+    const isCountdownDone = () => {
+        // + 1 as zero-based
+        if (today.getMonth() > countDownMounth + 1) {return true}
+        else if(today.getMonth() == countDownMounth + 1) {
+            if (today.getDate() >= countDownDay) {return true}
+        }
+        return false
+    }
     const toggleShowModal = () => {
         if(showMintModal) setNumberOfMint(1)
         setShowMintModal(!showMintModal)
@@ -52,20 +60,20 @@ export default function HeroSection(props: IHero) {
                 <TitleWrapper>
                     <MintModal showMintModal={showMintModal} setShowMintModal={setShowMintModal} />
                     <HeroTitle>Wuschelkopf</HeroTitle>
-                    {today.isAfter(REACT_APP_MINT_DROP_DATE) ?
+                    {isCountdownDone() ?
                         <>
                             <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
                             <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
                         </>
                         :
                         <ComingSoonWrapper>
-                            <ComingSoonWriting>Wuschelkopf Minting drops at <DateSpan>{REACT_APP_MINT_DROP_DATE}</DateSpan> 00:00 CET</ComingSoonWriting>
-                            <SubText>Until then, keep in touch to get the latest News!</SubText>
+                            <ComingSoonWriting>Wuschelkopf Minting drops at <span><DateSpan>{countdownDateString}</DateSpan> 00:00 CET</span></ComingSoonWriting>
+                            <SubText>Until then, let's keep in touch to get the latest News!</SubText>
                             <SocialIconsWrapper>
-                                <SocialIconLink href="https://discord.gg/H7E2teR9Bh" target="_blank" arial-label="Discord" color={myColors.light_brown}>
+                                <SocialIconLink href={discord_channel_url} target="_blank" arial-label="Discord" color={myColors.primary}>
                                     <BsDiscord />
                                 </SocialIconLink>
-                                <SocialIconLink href="https://twitter.com/WuschelkopfN" target="_blank" arial-label="Twitter" color={myColors.light_brown}>
+                                <SocialIconLink href={twitter_channel_url} target="_blank" arial-label="Twitter" color={myColors.primary}>
                                     <AiFillTwitterCircle />
                                 </SocialIconLink>
                             </SocialIconsWrapper>
@@ -87,14 +95,24 @@ export default function HeroSection(props: IHero) {
 const ComingSoonWrapper = styled.div`
   display: flex;
   flex: 1;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
 `
 
-const ComingSoonWriting = styled.h2`
-  margin-bottom: ${spacing.default};
+const ComingSoonWriting = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: ${fontSizes.title_xs};
+  margin: ${spacing.default};
+
+  @media screen and (max-width: ${pageSizes.sm}) {
+    font-size: ${fontSizes.default_m};
+  }
 `
 
 const DateSpan = styled.span`
