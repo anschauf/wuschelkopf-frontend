@@ -176,7 +176,3 @@ export const SocialIconLink = styled.a<ISocialIconLink>`
     fill:  ${({hoverColor = myColors.white}) => `${hoverColor}`};
   }
 `
-
-export const ButtonImgIcon = styled.img`
-  height: 31px  
-`

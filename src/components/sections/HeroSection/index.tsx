@@ -40,8 +40,9 @@ export default function HeroSection(props: IHero) {
 
     const isCountdownDone = () => {
         // + 1 as zero-based
-        if (today.getMonth() > countDownMounth + 1) {return true}
-        else if(today.getMonth() == countDownMounth + 1) {
+        console.log(today.getMonth())
+        if (today.getMonth() + 1 > countDownMounth ) {return true}
+        else if(today.getMonth() + 1 == countDownMounth) {
             if (today.getDate() >= countDownDay) {return true}
         }
         return false
