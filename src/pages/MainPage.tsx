@@ -9,6 +9,7 @@ import backgroundGreenCentered from '../images/background_green_centered.png'
 import TeamSection from "../components/sections/TeamSection";
 import FaqSection from "../components/sections/FaqSection";
 import {pageSizes} from "../resources/styling-constants";
+import TextSection from "../components/sections/TextSection";
 
 
 function MainPage() {
@@ -17,6 +18,18 @@ function MainPage() {
         <MainPageContainer>
             <BackgroundWrapper img={heroBackground}>
                 <HeroSection />
+                <TextSection
+                    label={'Unleash the mob!'}
+                    title={'Wuschelkopf'}
+                    texts={[
+                        'The Wuschelkopf (WK) is a collection of 10,00 unique NFTs minted on the Ethereum network.',
+                        'Wuschelkopf is German and means literally ‘mob head’.',
+                        'Since centuries they were hidden from us and only in some old, long forgotten tales the Wuschelkopfs are mentioned. Diverse as they are, they all share something in common: The not-even trying - but always awesome looking - mob-hair style.',
+                        '.\n',
+                        '    \n',
+                        'As their ancient hide-out has vanished, they are now free to be found. Be quick and get your own Wuschelkopf'
+                        ]}
+                />
                 <SlideSection />
 
             </BackgroundWrapper>

@@ -1,0 +1,56 @@
+import React, {useState, useEffect} from 'react';
+import styled from "styled-components";
+import {fontSizes, myColors, pageSizes, spacing} from "../../resources/styling-constants";
+
+export interface ITextSection {
+    label: string,
+    title: string,
+    texts: string[],
+}
+
+export default function TextSection(props: ITextSection) {
+    const {label, title, texts} = props
+
+    return(
+        <Container>
+            <Label>{label}</Label>
+            <Title>{title}</Title>
+            <TextContainer>
+                {
+                    texts.map(text => {
+                        return <p>{text}</p>
+                    })
+                }
+            </TextContainer>
+        </Container>
+    )
+}
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Label = styled.h4`
+    color: ${myColors.lime};
+`
+
+const Title = styled.h1`
+    font-size: ${fontSizes.title_s};
+`
+
+const TextContainer = styled.span`
+  width: 100%;
+  max-width: ${pageSizes.sm};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: ${spacing.double};
+  margin-bottom: ${spacing.quatriple};
+  font-size: ${fontSizes.default_s};
+`

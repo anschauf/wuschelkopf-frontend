@@ -45,7 +45,8 @@ export const pageSizes = {
 export const spacing = {
     half: '8px',
     default: '16px',
-    double: '32px'
+    double: '32px',
+    quatriple: '64px'
 }
 
 export const fontSizes = {
@@ -54,6 +55,7 @@ export const fontSizes = {
     title_sm: '48px',
     title_s: '40px',
     title_xs: '36px',
+    default_s: '18px',
     default_m: '24px',
     default_l: '36px'
 }
