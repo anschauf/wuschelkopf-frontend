@@ -50,16 +50,6 @@ export default function TeamMemberCard(props: ITeamMemberCard) {
     )
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 400px;
-  width: 400px;
-  margin-left: ${spacing.double};
-  margin-right: ${spacing.double};
-`
-
 const CardImage = styled.img`
   height: 250px;
   border-radius: 30px;
@@ -72,6 +62,7 @@ const NameTitle = styled.h1`
 `
 const DescriptionSection = styled.span<IColor>`
   color: ${({pickedColor = myColors.primary}) => pickedColor};
+  text-align: center;
 `
 
 
