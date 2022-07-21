@@ -16,8 +16,9 @@ import {
     handItemRarities,
     skinRarities
 } from "./rarities-content";
-import {pageSizes} from "../../../resources/styling-constants";
+import {myColors, pageSizes} from "../../../resources/styling-constants";
 import {rarityRoute} from "../../../GlobalConstants";
+import TextSection from "../TextSection";
 
 export interface IRaritiesSection {
 
@@ -31,6 +32,15 @@ export default function RaritiesSection(props: IRaritiesSection) {
         <Container>
             <ContainerWrapper>
                 <SectionTitle className={rarityRoute}>Rarities</SectionTitle>
+                <TextSection
+                    labelColor={myColors.primary}
+                    label={'Mach dich rar, sei ein Star!'}
+                    title={'Checkout the different rarities'}
+                    // TODO include text
+                    texts={[
+                        'Cool'
+                    ]}
+                />
                 <RowWrapper>
                     <CardSlider widthMode={'half'} title={'Skin'} cardContents={skinRarities}/>
                     <CardSlider widthMode={'half'} title={'Hair'} cardContents={hairRarities}/>

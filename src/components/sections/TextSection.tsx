@@ -4,16 +4,17 @@ import {fontSizes, myColors, pageSizes, spacing} from "../../resources/styling-c
 
 export interface ITextSection {
     label: string,
+    labelColor?: string,
     title: string,
     texts: string[] ,
 }
 
 export default function TextSection(props: ITextSection) {
-    const {label, title, texts} = props
+    const {label, labelColor = myColors.lime, title, texts} = props
 
     return(
         <Container>
-            <Label>{label}</Label>
+            <Label labelColor={labelColor}>{label}</Label>
             <Title>{title}</Title>
             <TextContainer>
                 {
@@ -39,8 +40,11 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Label = styled.h4`
-    color: ${myColors.lime};
+interface IColor{
+    labelColor: string
+}
+const Label = styled.h4<IColor>`
+    color: ${({labelColor}) => labelColor};
 `
 
 const Title = styled.h1`
