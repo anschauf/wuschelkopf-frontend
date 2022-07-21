@@ -5,7 +5,7 @@ import {fontSizes, myColors, pageSizes, spacing} from "../../resources/styling-c
 export interface ITextSection {
     label: string,
     title: string,
-    texts: string[],
+    texts: string[] ,
 }
 
 export default function TextSection(props: ITextSection) {
@@ -18,7 +18,12 @@ export default function TextSection(props: ITextSection) {
             <TextContainer>
                 {
                     texts.map(text => {
-                        return <p>{text}</p>
+                        if (text) {
+                            return <span>{text}</span>
+                        } else {
+                            return <br />
+                        }
+
                     })
                 }
             </TextContainer>
@@ -42,7 +47,7 @@ const Title = styled.h1`
     font-size: ${fontSizes.title_s};
 `
 
-const TextContainer = styled.span`
+const TextContainer = styled.div`
   width: 100%;
   max-width: ${pageSizes.sm};
   display: flex;
@@ -53,4 +58,5 @@ const TextContainer = styled.span`
   margin-top: ${spacing.double};
   margin-bottom: ${spacing.quatriple};
   font-size: ${fontSizes.default_s};
+  white-space: pre-line;
 `
