@@ -11,7 +11,15 @@ import {
     SocialIconLink,
     SocialIcons
 } from "./SidebarElements";
-import {faqRoute, roadmapRoute, homeRoute, rarityRoute, teamRoute} from "../../GlobalConstants";
+import {
+    faqRoute,
+    roadmapRoute,
+    homeRoute,
+    rarityRoute,
+    teamRoute,
+    opensea_collection_url,
+    discord_channel_url, twitter_channel_url
+} from "../../GlobalConstants";
 import {myColors} from "../../resources/styling-constants";
 import {BsDiscord} from "react-icons/bs";
 import {AiFillTwitterCircle} from "react-icons/ai";
@@ -49,13 +57,16 @@ export default function Sidebar(props: ISidebar) {
                 </SidebarMenu>
                 <SideSocialWrap>
                     <SocialIcons>
-                    <SocialIconLink href="/" target="_blank" arial-label="Discord" color={myColors.discord_blue}>
+                    <SocialIconLink href={discord_channel_url} target="_blank" arial-label="Discord" color={myColors.light_lime} hoverColor={myColors.discord_blue}>
                         <BsDiscord />
                     </SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.openSea_blue}>
-                        <OpenSeaIcon size={43} />
+                    <SocialIconLink href={opensea_collection_url} target="_blank" arial-label="OpenSea" color={myColors.openSea_blue} hoverColor={myColors.light_lime}>
+                        <OpenSeaIcon size={43}/>
                     </SocialIconLink>
-                    <SocialIconLink href="/" target="_blank" arial-label="Twitter" color={myColors.twitter_blue}>
+                    {/*<SocialIconLink href="/" target="_blank" arial-label="OpenSea" color={myColors.light_lime} hoverColor={myColors.openSea_blue}>*/}
+                    {/*    <OpenSeaIcon size={43} />*/}
+                    {/*</SocialIconLink>*/}
+                    <SocialIconLink href={twitter_channel_url} target="_blank" arial-label="Twitter" color={myColors.light_lime} hoverColor={myColors.twitter_blue}>
                         <AiFillTwitterCircle />
                     </SocialIconLink>
                     </SocialIcons>

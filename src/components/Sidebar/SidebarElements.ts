@@ -12,7 +12,7 @@ export const SidebarContainer = styled.aside<ISidebarContainerProps>`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: ${myColors.light_purple};
   display: grid;
   align-items: center;
   left: 0;
@@ -22,7 +22,7 @@ export const SidebarContainer = styled.aside<ISidebarContainerProps>`
 `
 
 export const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: ${myColors.light_lime};
   &:hover {
     color: ${myColors.primary};
     transition: 0.2s ease-in-out;
@@ -62,7 +62,7 @@ export const SidebarLink = styled(LinkScroll)`
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: ${myColors.white};
+  color: ${myColors.light_lime};
   cursor: pointer;
   
   &:hover {
@@ -85,7 +85,8 @@ export const SocialIcons = styled.div`
 
 
 export interface ISocialIconLink {
-    color?: string
+    color?: string;
+    hoverColor?: string
 }
 export const SocialIconLink = styled.a<ISocialIconLink>`
   color: ${({color = myColors.white}) => `${color}}`};
@@ -93,8 +94,8 @@ export const SocialIconLink = styled.a<ISocialIconLink>`
   font-size: 42px;
 
   &:hover {
-    color: ${myColors.primary};
-    fill: ${myColors.primary};
+    color: ${({hoverColor = myColors.primary}) => `${hoverColor}}`};
+    fill: ${({hoverColor = myColors.primary}) => `${hoverColor}}`};
     transition: 0.2s ease-in-out;
   }
 `
