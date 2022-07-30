@@ -38,6 +38,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `
 
 interface IColor{

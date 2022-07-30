@@ -38,7 +38,7 @@ export default function RaritiesSection(props: IRaritiesSection) {
                     title={'Checkout the different rarities'}
                     // TODO include text
                     texts={[
-                        'Cool'
+                        'Find your cuddly avatar amoung all possible Wuschelkopfs. Each one is unique!'
                     ]}
                 />
                 <RowWrapper>
