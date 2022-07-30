@@ -49,7 +49,7 @@ export default function Footer(props: IFooter) {
                             <AiFillTwitterCircle />
                         </SocialIconLink>
                     </SocialIconWrapper>
-                    <a>Terms of usage</a>
+                    {/*<a>Terms of usage</a>*/}
                 </FooterContentWrapper>
                 <FooterContentWrapper>
                     <RightsText>
