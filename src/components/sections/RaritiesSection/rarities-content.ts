@@ -31,21 +31,21 @@ import IMG_HAIREXTENSION_BOTH from '../../../images/card-slider/hairextension_bo
 export const skinRarities: ICardUnit[] = [
     {
         'image': IMG_SKIN_DARK,
-        'label': '36% Drop chance',
+        'label': '37% Drop chance',
         'title': 'DARK',
         'description': 'Together with the light skin, this is the most common tier.',
         'version': "purple"
     },
     {
         'image': IMG_SKIN_LIGHT,
-        'label': '36% Drop chance',
+        'label': '37% Drop chance',
         'title': 'LIGHT',
         'description': 'Also the most common tier, but they get faster sun-burned.',
         'version': "purple"
     },
     {
         'image': IMG_SKIN_GHOST,
-        'label': '16% Drop chance',
+        'label': '17% Drop chance',
         'title': 'GHOST',
         'description': 'A rarer skin, as this is a dead Wuschelkopf returning as a transparent ghost back to the world.',
         'version': "purple"
@@ -53,7 +53,7 @@ export const skinRarities: ICardUnit[] = [
     },
     {
         'image': IMG_SKIN_SKELETT,
-        'label': '8% Drop chance',
+        'label': '9% Drop chance',
         'title': 'SKELETT',
         'description': 'The rarest are undead bodies. The skeletal Wuschelkopf come with their own facial models making them the most wanted.',
         'version': "purple"
