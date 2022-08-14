@@ -10,6 +10,7 @@ import TeamSection from "../components/sections/TeamSection";
 import FaqSection from "../components/sections/FaqSection";
 import {pageSizes} from "../resources/styling-constants";
 import TextSection from "../components/sections/TextSection";
+import CollabBanners from "../components/CollabBanners";
 
 
 function MainPage() {
@@ -30,9 +31,8 @@ function MainPage() {
                         ]}
                 />
                 <SlideSection />
-
             </BackgroundWrapper>
-
+            <CollabBanners />
             <BackgroundWrapper img={backgroundOrange}>
                 <RaritiesSection />
             </BackgroundWrapper>
