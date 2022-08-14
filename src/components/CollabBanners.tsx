@@ -5,6 +5,7 @@ import {teamRoute} from "../GlobalConstants";
 import {SectionTitle} from "./HeaderElements";
 
 import IMG_NFT_CALENDAR from "../images/collab/nft-calendar-transparent.png"
+import IMG_NFT_DROPLIST from "../images/collab/nft_droplist.png"
 
 interface IMediaEntry {
     image: string,
@@ -36,6 +37,7 @@ export default function CollabBanners(props: ICollabBanners) {
             <SectionTitle>As seen on</SectionTitle>
             <EntryWrapper>
                 <MediEntry image={IMG_NFT_CALENDAR} label={'NFTCalendar.io'} link={'https://nftcalendar.io/'}/>
+                <MediEntry image={IMG_NFT_DROPLIST} label={'NFTDroplist.co.uk'} link={'https://www.nftdroplist.co.uk/'}/>
             </EntryWrapper>
         </Container>
     )
@@ -84,6 +86,9 @@ const MediaContainer = styled.div`
 
 const LinkWrapper = styled.a`
   text-decoration: none;
+  &:active {
+    color: ${myColors.secondary};
+  }
 `
 
 const MediaImage = styled.img`
