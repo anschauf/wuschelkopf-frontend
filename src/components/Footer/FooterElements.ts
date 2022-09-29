@@ -7,6 +7,9 @@ const footerSize = '80px'
 export const FooterContainer = styled.footer`
   border-top: ${myColors.primary} solid 3px;
   color: ${myColors.primary};
+  padding-top: ${spacing.default};
+  padding-left: ${spacing.double};
+  padding-right: ${spacing.double};
 `
 
 export const FooterWrap = styled.div`
