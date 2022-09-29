@@ -16,6 +16,6 @@ export const countDownDay = process.env.REACT_APP_MINT_DROP_DAY ? parseInt(proce
 
 
 // Links
-export const opensea_collection_url = process.env.REACT_APP_COLLECTION_URL
+export const opensea_collection_url = 'https://opensea.io/collection/wuschelkopf'
 export const discord_channel_url = 'https://discord.gg/H7E2teR9Bh'
 export const twitter_channel_url = 'https://twitter.com/WuschelkopfN'
