@@ -23,7 +23,6 @@ import {fontSizes, myColors, pageSizes, spacing} from "../../../resources/stylin
 import {SocialIconLink} from "../../Navbar/NavBarElements";
 import {BsDiscord} from "react-icons/bs";
 import {AiFillTwitterCircle} from "react-icons/ai";
-import useDate from "react-use-date";
 import {countDownDay, countDownMounth, discord_channel_url, twitter_channel_url} from "../../../GlobalConstants";
 
 export interface IHero {
@@ -34,13 +33,12 @@ export default function HeroSection(props: IHero) {
     const [showMintModal, setShowMintModal] = useState<boolean>(false)
     const [numberOfMint, setNumberOfMint] = useState<number>(1)
 
-    const today = useDate({ interval: 'hour' })
+    const today = new Date()
 
     const countdownDateString =`${countDownDay.toString().length > 1 ? '' : '0'}${countDownDay}.${countDownMounth.toString().length > 1 ? '' : '0'}${countDownMounth}.2022`
 
     const isCountdownDone = () => {
         // + 1 as zero-based
-        console.log(today.getMonth())
         if (today.getMonth() + 1 > countDownMounth ) {return true}
         else if(today.getMonth() + 1 == countDownMounth) {
             if (today.getDate() >= countDownDay) {return true}
