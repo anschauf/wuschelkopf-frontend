@@ -5,7 +5,7 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 import {animated, useSpring} from "react-spring";
 import styled from 'styled-components'
-import {myColors, pageSizes} from "../resources/styling-constants";
+import {myColors} from "../resources/styling-constants";
 import {MdClose} from "react-icons/md";
 import OgerImage from '../images/website_modal.png'
 
@@ -102,17 +102,6 @@ const ModalWrapper = styled.div<IModalWrapper>`
   justify-content: center;
   color: ${myColors.white};
   border: ${myColors.primary} 5px solid;
-
-  @media screen and (max-width: ${pageSizes.xl}) { {
-    width: 600px;
-    height: 375px;
-  }
-    
-  @media screen and (max-width: ${pageSizes.md}) { {
-    width: 400px;
-    height: 250px;
-
-  }
 `
 
 const CloseModalButton = styled(MdClose)`

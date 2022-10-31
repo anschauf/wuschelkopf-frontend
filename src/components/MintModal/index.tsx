@@ -1,9 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import Modal from "../Modal";
-import {BasicH3, TopLine} from "../BasicElements";
-import IntegerInput from "../IntegerInput";
-import {maxNumberOfMint} from "../../GlobalConstants";
 import {MyButton} from "../ButtonElements";
 import Spinner from "../Spinner";
 import {myColors} from "../../resources/styling-constants";
@@ -14,8 +11,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import MintedImageSwiper, {SubTitle, Title} from "./MintedImageSwiper";
+import MintedImageSwiper, {SubTitle} from "./MintedImageSwiper";
 import MintingView from "./MintingView";
+import {CloseIcon, Icon, SidebarContainer, SidebarWrapper} from '../Sidebar/SidebarElements';
 
 
 export interface IMintModal {
@@ -23,10 +21,24 @@ export interface IMintModal {
     setShowMintModal: (state: boolean) => void
 }
 
+
+
+
 export default function MintModal(props: IMintModal) {
+    const breakWidth = 992
+    const [isDesktop, setDesktop] = useState(window.innerWidth > breakWidth);
+
+    const updateMedia = () => {
+        setDesktop(window.innerWidth > breakWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+    });
+
     const {showMintModal, setShowMintModal} = props;
     const [numberOfMint, setNumberOfMint] = useState<number>(1)
-    // const [mintedTokenIds, setMintedTokenIds] = useState<string[]>(['08','09','10'])
     const [mintedTokenIds, setMintedTokenIds] = useState<string[]>([])
     const [hasMintingError, setHasMintingError] = useState<boolean>(false)
 
@@ -47,6 +59,40 @@ export default function MintModal(props: IMintModal) {
             // @ts-ignore
             return mintResult.events.Transfer.map(nft => nft.returnValues.tokenId)
         }
+    }
+
+
+    function modalContent() {
+        return(
+            <>
+                { isLoading ?
+                    <LoadingWrapper>
+                        <LoadingStateText>{mintedTokenIds.length > 0 ?  "Loading minted NFTs..." : "Minting NFTs....Check your Metamask"}</LoadingStateText>
+                        <Spinner color={myColors.primary} />
+                    </LoadingWrapper>
+                    :
+                    <>
+                        {
+                            hasMintingError ?
+                                <>
+                                    <SubTitle>An error occured during minting. Please try again!</SubTitle>
+                                    <MyButton onClick={() => setShowMintModal(false)}>Ok</MyButton>
+                                </>
+                                :
+                                <>
+                                    { mintedTokenIds.length > 0 ?
+                                        <MintedImageSwiper mintedTokenIds={mintedTokenIds}/>
+                                        :
+                                        <MintingView mintClickHandler={mintClickHandler} setNumberOfMint={setNumberOfMint} />
+                                    }
+                                </>
+                        }
+
+                    </>
+
+                }
+            </>
+        )
     }
 
     const mintClickHandler = async () => {
@@ -71,38 +117,24 @@ export default function MintModal(props: IMintModal) {
 
 
 
-
-
     return (
-        <Modal showModal={showMintModal} toggleShowModal={toggleShowModal}>
-
-            { isLoading ?
-                <LoadingWrapper>
-                    <LoadingStateText>{mintedTokenIds.length > 0 ?  "Loading minted NFTs..." : "Minting NFTs....Check your Metamask"}</LoadingStateText>
-                    <Spinner color={myColors.primary} />
-                </LoadingWrapper>
-                :
-                <>
-                    {
-                        hasMintingError ?
-                        <>
-                            <SubTitle>An error occured during minting. Please try again!</SubTitle>
-                            <MyButton onClick={() => setShowMintModal(false)}>Ok</MyButton>
-                        </>
-                            :
-                        <>
-                            { mintedTokenIds.length > 0 ?
-                                <MintedImageSwiper mintedTokenIds={mintedTokenIds}/>
-                                :
-                                <MintingView mintClickHandler={mintClickHandler} setNumberOfMint={setNumberOfMint} />
-                            }
-                        </>
-                    }
-
-                </>
-
-            }
-        </Modal>
+        <>
+        {isDesktop ?
+            <Modal showModal={showMintModal} toggleShowModal={toggleShowModal}>
+            {modalContent()}
+            </Modal>
+            :
+            <SidebarContainer isOpen={showMintModal} onClick={() => {}}>
+            <Icon onClick={toggleShowModal}>
+                <CloseIcon/>
+            </Icon>
+                <SidebarWrapper>
+                    <SideMintContentWrapper>
+                        {modalContent()}
+                    </SideMintContentWrapper>
+                </SidebarWrapper>
+            </SidebarContainer> }
+        </>
     )
 }
 
@@ -123,3 +155,10 @@ const LoadingStateText = styled.span`
     color: ${myColors.primary};
 `
 
+const SideMintContentWrapper = styled.div`
+    display: flex;
+  flex-direction: column;
+    flex: 1;
+    justify-content: center;
+  align-items: center;
+`
