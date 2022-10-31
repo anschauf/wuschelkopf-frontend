@@ -5,14 +5,12 @@ import frog_eye from '../../../images/hero/frog_eye.png'
 import wind_wheel from '../../../images/hero/windwheel.png'
 import {MyButton} from '../../ButtonElements';
 import {
-    ColorSpan,
     FigureWrapper,
     HeroContainer,
     HeroFemale,
     HeroMale,
     HeroTitle,
     LeftEye,
-    MintingCount,
     RightEye,
     TitleWrapper,
     WindWheel
@@ -62,7 +60,6 @@ export default function HeroSection(props: IHero) {
                     {isCountdownDone() ?
                         <>
                             <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
-                            <MintingCount><ColorSpan>8'412</ColorSpan> / 10'000 MINTED</MintingCount>
                         </>
                         :
                         <ComingSoonWrapper>

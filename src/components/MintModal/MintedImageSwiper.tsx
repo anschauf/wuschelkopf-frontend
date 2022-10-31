@@ -4,7 +4,6 @@ import {fontSizes, myColors, spacing} from "../../resources/styling-constants";
 import styled from "styled-components";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper";
-import {BsShareFill} from 'react-icons/bs';
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +11,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import {SocialIconLink} from "../Navbar/NavBarElements";
 import OpenSeaIcon from "../../resources/OpenSeaIcon";
-import { MyButton } from '../ButtonElements';
+import {MyButton} from '../ButtonElements';
 
 const REACT_APP_API_IPFS_IMAGE_URL = process.env.REACT_APP_IPFS_IMAGE_URL
 const REACT_APP_OPENSEA_URL = process.env.REACT_APP_OPENSEA_URL
@@ -35,6 +34,12 @@ export default function MintedImageSwiper(props: IMintedImageSwiper) {
         var tempArray = JSON.parse(JSON.stringify(mintedImagesLoaded));
         tempArray[index] = true
         setMintedImagesLoaded(tempArray)
+    }
+
+    function completeIdWithLeadingZeroes(id: string) {
+        let idLength = id.length
+        let procedingZeroes = 4 - idLength
+        return `${'0'.repeat(procedingZeroes)}${id}`
     }
 
     useEffect(() => {
@@ -67,7 +72,7 @@ export default function MintedImageSwiper(props: IMintedImageSwiper) {
                             <>
                                 <SwiperSlide key={id}>
                                         {isLoaded ? null : <SpinnerWrapper><Spinner color={myColors.primary} /> </SpinnerWrapper>}
-                                        <ModalImage displayImage={mintedImagesLoaded.every(entry => entry)} src={`${REACT_APP_API_IPFS_IMAGE_URL}/${id}.png`} alt={`Wuschelkopf NFT #${id}`} onLoad={() => updateLoadedState(index)}/>
+                                        <ModalImage displayImage={mintedImagesLoaded.every(entry => entry)} src={`${REACT_APP_API_IPFS_IMAGE_URL}/${completeIdWithLeadingZeroes(id)}.png`} alt={`Wuschelkopf NFT #${id}`} onLoad={() => updateLoadedState(index)}/>
                                         { isLoaded ?
                                             <SocialLinkWrapper>
                                                 <SocialIconLink href={`${REACT_APP_OPENSEA_URL}/${parseInt(id)}`} target="_blank" arial-label="OpenSea" color={myColors.white} hoverColor={myColors.primary}>
