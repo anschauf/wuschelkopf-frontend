@@ -109,9 +109,8 @@ export default function MintModal(props: IMintModal) {
             }
         } catch (e) {
             setHasMintingError(true)
+            toggleShowModal()
         }
-
-        console.log("finished")
         setIsLoading(false)
     }
 
