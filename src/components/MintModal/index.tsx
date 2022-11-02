@@ -61,6 +61,11 @@ export default function MintModal(props: IMintModal) {
         }
     }
 
+    function confirmErrorMessage() {
+        setShowMintModal(false)
+        setHasMintingError(false)
+    }
+
 
     function modalContent() {
         return(
@@ -76,7 +81,7 @@ export default function MintModal(props: IMintModal) {
                             hasMintingError ?
                                 <>
                                     <SubTitle>An error occured during minting. Please try again!</SubTitle>
-                                    <MyButton onClick={() => setShowMintModal(false)}>Ok</MyButton>
+                                    <MyButton onClick={confirmErrorMessage}>Ok</MyButton>
                                 </>
                                 :
                                 <>
@@ -104,11 +109,9 @@ export default function MintModal(props: IMintModal) {
 
                 setMintedTokenIds(tokenIds)
             } else {
-                console.log("error")
                 setHasMintingError(true)
             }
         } catch (e) {
-            setHasMintingError(true)
             toggleShowModal()
         }
         setIsLoading(false)
