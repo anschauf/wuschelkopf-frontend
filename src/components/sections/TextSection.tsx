@@ -20,7 +20,7 @@ export default function TextSection(props: ITextSection) {
                 {
                     texts.map(text => {
                         if (text) {
-                            return <span>{text}</span>
+                            return <span key={text.slice(0,(Math.min(text.length, 10)))}>{text}</span>
                         } else {
                             return <br />
                         }
