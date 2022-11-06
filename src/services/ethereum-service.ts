@@ -82,3 +82,8 @@ export async function mintNFT(numberToMint: number, address?: string) {
         })
     }
 }
+
+
+export function isMetaMaskInstalled(): Boolean{
+    return (typeof  window.ethereum !== 'undefined')
+}

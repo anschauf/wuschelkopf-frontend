@@ -22,6 +22,7 @@ import {SocialIconLink} from "../../Navbar/NavBarElements";
 import {BsDiscord} from "react-icons/bs";
 import {AiFillTwitterCircle} from "react-icons/ai";
 import {countDownDay, countDownMounth, discord_channel_url, twitter_channel_url} from "../../../GlobalConstants";
+import {isMetaMaskInstalled} from "../../../services/ethereum-service";
 
 export interface IHero {
 
@@ -43,6 +44,11 @@ export default function HeroSection(props: IHero) {
         }
         return false
     }
+
+    const goToMetaMask = () => {
+        // @ts-ignore
+        window.open('https://metamask.io/download/','_blank').focus();
+    }
     const toggleShowModal = () => {
         if(showMintModal) setNumberOfMint(1)
         setShowMintModal(!showMintModal)
@@ -59,7 +65,17 @@ export default function HeroSection(props: IHero) {
                     <HeroTitle>Wuschelkopf</HeroTitle>
                     {isCountdownDone() ?
                         <>
-                            <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
+                            {
+                                isMetaMaskInstalled() ?
+                                    <>
+                                        <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
+                                    </>:
+                                    <>
+                                        <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={goToMetaMask}>Install MetaMask</MyButton>
+                                        <SubText>To be able to mint, Metamask must be installed!</SubText>
+                                    </>
+                            }
+
                         </>
                         :
                         <ComingSoonWrapper>
@@ -116,6 +132,7 @@ const DateSpan = styled.span`
 `
 
 const SubText = styled.div`
+    margin: ${spacing.default};
 `
 
 const SocialIconsWrapper = styled.div`
