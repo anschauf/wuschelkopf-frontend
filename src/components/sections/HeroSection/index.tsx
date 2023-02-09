@@ -63,34 +63,46 @@ export default function HeroSection(props: IHero) {
                 <TitleWrapper>
                     <MintModal showMintModal={showMintModal} setShowMintModal={setShowMintModal} />
                     <HeroTitle>Wuschelkopf</HeroTitle>
-                    {isCountdownDone() ?
-                        <>
-                            {
-                                isMetaMaskInstalled() ?
-                                    <>
-                                        <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
-                                    </>:
-                                    <>
-                                        <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={goToMetaMask}>Install MetaMask</MyButton>
-                                        <SubText>To be able to mint, Metamask must be installed!</SubText>
-                                    </>
-                            }
 
-                        </>
-                        :
-                        <ComingSoonWrapper>
-                            <ComingSoonWriting>Wuschelkopf Minting drops at <span><DateSpan>{countdownDateString}</DateSpan> 00:00 CET</span></ComingSoonWriting>
-                            <SubText>Until then, let's keep in touch to get the latest News!</SubText>
-                            <SocialIconsWrapper>
-                                <SocialIconLink href={discord_channel_url} target="_blank" arial-label="Discord" color={myColors.primary}>
-                                    <BsDiscord />
-                                </SocialIconLink>
-                                <SocialIconLink href={twitter_channel_url} target="_blank" arial-label="Twitter" color={myColors.primary}>
-                                    <AiFillTwitterCircle />
-                                </SocialIconLink>
-                            </SocialIconsWrapper>
-                        </ComingSoonWrapper>
-                    }
+                        {
+                            isMetaMaskInstalled() ?
+                                <>
+                                    <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>
+                                </>:
+                                <>
+                                    <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={goToMetaMask}>Install MetaMask</MyButton>
+                                    <SubText>To be able to mint, Metamask must be installed!</SubText>
+                                </>
+                        }
+                    {/*Hotfix: Deactivate countdown check */}
+                    {/*{isCountdownDone() ?*/}
+                    {/*    <>*/}
+                    {/*        {*/}
+                    {/*            isMetaMaskInstalled() ?*/}
+                    {/*                <>*/}
+                    {/*                    <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={toggleShowModal}>MINT WUSCHELKOPF NFTs</MyButton>*/}
+                    {/*                </>:*/}
+                    {/*                <>*/}
+                    {/*                    <MyButton fontBig={true} variant={'secondary'} big={true}  onClick={goToMetaMask}>Install MetaMask</MyButton>*/}
+                    {/*                    <SubText>To be able to mint, Metamask must be installed!</SubText>*/}
+                    {/*                </>*/}
+                    {/*        }*/}
+
+                    {/*    </>*/}
+                    {/*    :*/}
+                    {/*    <ComingSoonWrapper>*/}
+                    {/*        <ComingSoonWriting>Wuschelkopf Minting drops at <span><DateSpan>{countdownDateString}</DateSpan> 00:00 CET</span></ComingSoonWriting>*/}
+                    {/*        <SubText>Until then, let's keep in touch to get the latest News!</SubText>*/}
+                    {/*        <SocialIconsWrapper>*/}
+                    {/*            <SocialIconLink href={discord_channel_url} target="_blank" arial-label="Discord" color={myColors.primary}>*/}
+                    {/*                <BsDiscord />*/}
+                    {/*            </SocialIconLink>*/}
+                    {/*            <SocialIconLink href={twitter_channel_url} target="_blank" arial-label="Twitter" color={myColors.primary}>*/}
+                    {/*                <AiFillTwitterCircle />*/}
+                    {/*            </SocialIconLink>*/}
+                    {/*        </SocialIconsWrapper>*/}
+                    {/*    </ComingSoonWrapper>*/}
+                    {/*}*/}
 
 
                 </TitleWrapper>
